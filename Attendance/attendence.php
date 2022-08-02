@@ -12,11 +12,11 @@ $result = mysqli_query($connect, $query);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Design || Future Web</title>
+    <title>Attandance</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body style="background-color:rgba(0, 200, 200, 0.714)">
 
 </script>
 <div class="header_fixed">
@@ -24,23 +24,21 @@ $result = mysqli_query($connect, $query);
         <h1>Student Attendense</h1>
         <!-- Select Tag Start Here -->
         <!-- Teacher select Starts here -->
-        <label for="teacher">Choose Faculty Name</label><br>
+        <!-- <label for="teacher">Choose Faculty Name</label><br>
         <select id="teacher">
         <option></option>
-        <?php while($tndata = mysqli_fetch_array($tnresult)){
-        $displayData = $tndata['tname'];
-         ?>
+       // <?php while($tndata = mysqli_fetch_array($tnresult)){
+       // $displayData = $tndata['tname'];
+        // ?>
         <option value="<?php echo $displayData;?>"><?php echo $displayData; ?></option>
                 
-        <?php } ?>
-        </select>
+        //<?php } ?>
+        </select> -->
         <!-- Teacher Select tag ends Here -->
-
         <!-- subject Tag starts here -->
 
-        <label for="dub">Choose Sub</label><br>
-        <select id="sub">
-        <option></option>
+       <h2> <label for="dub">Choose Sub</label></h2><br>
+        <select id="sub" style="height:30px;width: 120px;" >
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $displaysubData = $subdata['sub_name'];
