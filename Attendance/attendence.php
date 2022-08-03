@@ -3,7 +3,18 @@ require_once 'database/connection.php';
 require_once 'database/data_retrive.php';
 $query = "SELECT * FROM students";
 $result = mysqli_query($connect, $query);
-
+//Insert Query Starts From Here
+// require_once 'connection.php';
+// require_once 'data_retrive.php';
+if(isset($_POST['submit'])){
+    foreach($_POST['attend'] as $ids=>$attend){
+       $usn= $_POST["usn"] [$ids]; 
+        mysqli_query($connect,"insert into attendence (usn,attend) values ('$usn','$attend')");
+        // echo $check_id;
+       }
+}
+mysqli_close($connect);
+//Insert Query Ends here
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +25,7 @@ $result = mysqli_query($connect, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attandance</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/submitbtt.css">
 </head>
 
 <body style="background-color:rgba(0, 200, 200, 0.714)">
@@ -38,7 +50,7 @@ $result = mysqli_query($connect, $query);
         <!-- subject Tag starts here -->
 
        <h2> <label for="dub">Choose Sub</label></h2><br>
-        <select id="sub" style="height:30px;width: 120px;" >
+        <select id="sub" style="height:30px;width: 120px; background-color:antiquewhite;" >
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $displaysubData = $subdata['sub_name'];
@@ -53,8 +65,8 @@ $result = mysqli_query($connect, $query);
   <!-- Select Tag ends Here -->
   <br>
         <br>
-        <form method="POST" action="database/insert.php">
-    <table>
+        <form method="POST">
+    <table style="border-radius:10% ;">
             <thead>
                 <tr>
                     <th>SN.no</th>
@@ -104,10 +116,18 @@ $result = mysqli_query($connect, $query);
  ?>
             </tbody>
         </table>
-       <input type="submit" name="submit">submit</input>
-       </form>
-        </center>
+        <br>
+       
+        <!-- Submit Starts From Here -->
+        
+        <div class="container">
+  <button class="button button-1" name="submit">Submit</button>
+  </div>
+    <!-- Submit Button Ends Here -->
     </div>
+        </form>
+        </center>
+   
 
 
 </body>
