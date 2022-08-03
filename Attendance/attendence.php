@@ -50,12 +50,12 @@ mysqli_close($connect);
         <!-- subject Tag starts here -->
 
        <h2> <label for="dub">Choose Sub</label></h2><br>
-        <select id="sub" style="height:30px;width: 120px; background-color:antiquewhite;" >
+        <select id="sub" style="border-radius: 15px;height: 35px;width: 193px; background-color:antiquewhite;font-weight:900;border: 2px solid black;" >
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $displaysubData = $subdata['sub_name'];
          ?>
-        <option value="<?php echo $displaysubData;?>"><?php echo $displaysubData; ?></option>
+        <option style="border-radius: 20px;" value="<?php echo $displaysubData;?>"><?php echo $displaysubData; ?></option>
 
         <?php } ?>
         </select>
@@ -66,7 +66,7 @@ mysqli_close($connect);
   <br>
         <br>
         <form method="POST">
-    <table style="border-radius:10% ;">
+    <table style="border-radius:20px ;">
             <thead>
                 <tr>
                     <th>SN.no</th>
