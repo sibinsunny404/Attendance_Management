@@ -20,6 +20,24 @@
 </head>
 <body>
   <center>
+  <link rel="stylesheet" href="css/loader.css">
+  <div class="load-wraper">
+<div class="spinner">
+  <div class="set1">  
+    <div class="ball"></div>
+    <div class="ball"></div>
+  </div>
+  <div class="set2">
+    <div class="ball"></div>
+    <div class="ball"></div>
+  </div>
+</div>
+</div>
+<script>
+  $(window).on("load",function(){
+    $(".load-wraper").fadeOut("slow");
+  });
+</script>
   <div class="container">
   <div class="button button-1">Neon</div>
   </div>

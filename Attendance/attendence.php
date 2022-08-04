@@ -42,7 +42,6 @@ mysqli_close($connect);
 background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ">
-
 </script>
 <div style="border:0px;" class="header_fixed">
     <center>
@@ -79,9 +78,9 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
   <br>
         <br>
         <form method="POST">
-    <table style="border-radius:20px ;">
-            <thead>
-                <tr>
+    <table >
+            <thead >
+                <tr >
                     <th>SN.no</th>
                     <th>USN</th>
                     <th>Username</th>
