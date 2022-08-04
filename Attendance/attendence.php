@@ -25,10 +25,23 @@ mysqli_close($connect);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attandance</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/submitbtt.css">
+    
+    <!-- radio button style Starts from here -->
+    <script>
+        function c(){
+            
+            if(document.getElementById("a").checked){
+                document.getElementById("a").style.backgroundColor="red"
+            }
+        }
+    </script>
+    <!-- radio button style ends here -->
 </head>
 
-<body style="background-color:rgba(0, 200, 200, 0.714)">
+<body style="background: #FC466B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
 
 </script>
 <div class="header_fixed">
@@ -95,10 +108,10 @@ mysqli_close($connect);
                 <td>
                 <link rel="stylesheet" href="css/radiobutton.css">
                 <label class="container">P
-                 <input type="radio"  name="attend[<?php echo $data['usn']; ?>]"  value="present" checked> 
+                 <input type="radio" id="p" onclick="c()"  name="attend[<?php echo $data['usn']; ?>]"  value="present" checked> 
                  <span class="check"></span>
                  <label class="container" >A 
-                 <input type="radio" name="attend[<?php echo $data['usn']; ?>]"  value="absent">
+                 <input type="radio" id="a" onclick="c()" name="attend[<?php echo $data['usn']; ?>]"  value="absent">
                  <span class="check" ></span>
                </label>
                </label>
@@ -119,7 +132,7 @@ mysqli_close($connect);
         <br>
        
         <!-- Submit Starts From Here -->
-        
+        <link rel="stylesheet" href="css/submitbtt.css">
         <div class="container">
   <button class="button button-1" name="submit">Submit</button>
   </div>
