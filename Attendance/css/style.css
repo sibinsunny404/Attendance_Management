@@ -25,7 +25,7 @@ table {
     max-height: 100vh;
     width: 100%;
     overflow: auto;
-    /* border: 0px solid #dddddd; */
+    border: 1px solid #dddddd;
 }
 
 .header_fixed thead th {
@@ -51,11 +51,18 @@ td img {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background: #DAE2F8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
 }
 
 tr:nth-child(odd) {
-    background-color: #edeef1;
+    background: #9796f0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 tr:hover td {

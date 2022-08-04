@@ -44,7 +44,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
 ">
 
 </script>
-<div class="header_fixed">
+<div style="border:0px;" class="header_fixed">
     <center>
         <h1>Student Attendense</h1>
         <!-- Select Tag Start Here -->
@@ -63,12 +63,12 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
         <!-- subject Tag starts here -->
 
        <h2> <label for="dub">Choose Sub</label></h2><br>
-        <select id="sub" style="border-radius: 15px;height: 35px;width: 193px; background-color:antiquewhite;font-weight:900;border: 2px solid black;" >
+        <select id="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $displaysubData = $subdata['sub_name'];
          ?>
-        <option style="border-radius: 20px;" value="<?php echo $displaysubData;?>"><?php echo $displaysubData; ?></option>
+        <option style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" value="<?php echo $displaysubData;?>"><?php echo $displaysubData; ?></option>
 
         <?php } ?>
         </select>
