@@ -78,11 +78,13 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $displaysubData = $subdata['sub_name'];
+        $sem=$subdata['sem'];
          ?>
         <option style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" value="<?php echo $displaysubData;?>"><?php echo $displaysubData; ?></option>
-
+          
         <?php } ?>
         </select>
+        <h2>Sem:<?php echo $sem;?></h2>
 
         <!-- subject Tag ends Here -->
  
