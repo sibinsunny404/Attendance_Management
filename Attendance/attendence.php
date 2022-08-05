@@ -8,10 +8,13 @@ $result = mysqli_query($connect, $query);
 // require_once 'data_retrive.php';
 if(isset($_POST['submit'])){
     foreach($_POST['attend'] as $ids=>$attend){
-       $usn= $_POST["usn"] [$ids]; 
-        mysqli_query($connect,"insert into attendence (usn,attend) values ('$usn','$attend')");
+       $usn= $_POST["usn"] [$ids];
+    }
+       $sub=$_POST["sub"];
+        // $sem=$_POST["sem"];
+        mysqli_query($connect,"insert into attendence (usn,attend,subject) values ('$usn','$attend','$sub')");
         // echo $check_id;
-       }
+       
 }
 mysqli_close($connect);
 //Insert Query Ends here
@@ -57,7 +60,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
 <div class="loader"></div>
 <div style="border:0px;" class="header_fixed">
     <center>
-        <h1>Student Attendense</h1>
+        <h1 style="line-height:normal;">Student Attendense</h1>
         <!-- Select Tag Start Here -->
         <!-- Teacher select Starts here -->
         <!-- <label for="teacher">Choose Faculty Name</label><br>
@@ -71,10 +74,11 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
         //<?php } ?>
         </select> -->
         <!-- Teacher Select tag ends Here -->
+
         <!-- subject Tag starts here -->
 
-       <h2> <label for="dub">Choose Sub</label></h2><br>
-        <select id="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
+       <h2> <label for="dub" style="line-height:normal;">Choose Sub</label></h2><br>
+        <select  name="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $displaysubData = $subdata['sub_name'];
@@ -84,6 +88,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
           
         <?php } ?>
         </select>
+        <input type="hidden" name="sem" value="<?php echo $sem;?>">
         <h2>Sem:<?php echo $sem;?></h2>
 
         <!-- subject Tag ends Here -->
