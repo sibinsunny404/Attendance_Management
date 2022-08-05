@@ -11,12 +11,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-    // $(window).load(function() {
-    // $(".load-wraper").fadeOut("slow");
-    $(window).on("load", function () {
-  document.getElementByClassName("loade-wrapper").style.visibility = "hidden";
+   window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
 });
-  // });
+
 </script>
 </head>
 <body>
@@ -25,14 +29,7 @@
     <img src="https://picsum.photos/300/300/?random" alt="">
  <!-- Loading square for squar.red network -->
 <link rel="stylesheet" href="css/loader.css">
-<div class="loader-wraper">
-<span class="loader"><span class="loader-inner"></span></span>
-</div>
-<script>
-  $(window).on(load,function(){
-    $(".loader-wraper").fadeOut("slow");
-  });
-</script>
+<div class="loader"></div>
     </center>
 </body>
 </html>

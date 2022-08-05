@@ -25,7 +25,6 @@ mysqli_close($connect);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attandance</title>
     <link rel="stylesheet" href="css/style.css" />
-    
     <!-- radio button style Starts from here -->
     <script>
         function c(){
@@ -42,7 +41,20 @@ mysqli_close($connect);
 background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ">
+<script>
+   window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+
 </script>
+<link rel="stylesheet" href="css/loader.css">
+<div class="loader"></div>
 <div style="border:0px;" class="header_fixed">
     <center>
         <h1>Student Attendense</h1>
@@ -78,6 +90,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
   <br>
         <br>
         <form method="POST">
+        <div class="table-responsive">
     <table >
             <thead >
                 <tr >
@@ -128,6 +141,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
  ?>
             </tbody>
         </table>
+        </div>
         <br>
        
         <!-- Submit Starts From Here -->
