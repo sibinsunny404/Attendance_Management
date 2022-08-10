@@ -10,7 +10,8 @@ if(isset($_POST['submit'])){
     foreach($_POST['attend'] as $ids=>$attend){
        $usn= $_POST["usn"] [$ids];
     //    $sub=$_POST["sub"] [$ids];
-    mysqli_query($connect,"insert into attendence (usn,attend) values ('$usn','$attend')");
+    $subc = isset($_POST["sub"] ) ? $_POST["sub"]: '';
+    mysqli_query($connect,"insert into attendence (usn,attend,sub_code) values ('$usn','$attend','$subc')");
     }
     // echo $sub;
        
@@ -64,13 +65,13 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
         <h1 style="line-height:normal;">Student Attendense</h1>
 
        <h2> <label for="dub" style="line-height:normal;">Choose Sub</label></h2><br>
-        <select  name="sub[<?php echo $subj;?>]" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
+        <select  name="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $subj = $subdata['sub_name'];
         $sem=$subdata['sem'];
          ?>
-        <option style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" value="<?php echo $subj;?>"><?php echo $subj; ?></option>
+        <option style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" value="<?php echo $subj;?>" name="<?php echo $subj;?>"><?php echo $subj; ?></option>
         <?php } ?>
         </select>
         <input type="hidden" name="sem" value="<?php echo $sem;?>">
@@ -107,7 +108,11 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
             </td>
                 
                 <td>
-                     <?php echo $data['name']; ?>
+                     <?php 
+                    $subc=$_POST["sub"]; 
+                    echo $subc;
+                    ?>
+                    
                 </td>
                 <td>
                 <link rel="stylesheet" href="css/radiobutton.css">
