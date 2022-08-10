@@ -9,10 +9,22 @@ $result = mysqli_query($connect, $query);
 if(isset($_POST['submit'])){
     foreach($_POST['attend'] as $ids=>$attend){
        $usn= $_POST["usn"] [$ids];
+       $sub=$_POST["sub"] [$ids];
     }
-       $sub=$_POST["sub"];
+    // echo $sub;
+       
         // $sem=$_POST["sem"];
-        mysqli_query($connect,"insert into attendence (usn,attend,subject) values ('$usn','$attend','$sub')");
+        // mysqli_query($connect,"insert into attendence (usn,attend) values ('$usn','$attend')");
+        ?>
+       <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+<?php
         // echo $check_id;
        
 }
@@ -61,31 +73,15 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
 <div style="border:0px;" class="header_fixed">
     <center>
         <h1 style="line-height:normal;">Student Attendense</h1>
-        <!-- Select Tag Start Here -->
-        <!-- Teacher select Starts here -->
-        <!-- <label for="teacher">Choose Faculty Name</label><br>
-        <select id="teacher">
-        <option></option>
-       // <?php while($tndata = mysqli_fetch_array($tnresult)){
-       // $displayData = $tndata['tname'];
-        // ?>
-        <option value="<?php echo $displayData;?>"><?php echo $displayData; ?></option>
-                
-        //<?php } ?>
-        </select> -->
-        <!-- Teacher Select tag ends Here -->
-
-        <!-- subject Tag starts here -->
 
        <h2> <label for="dub" style="line-height:normal;">Choose Sub</label></h2><br>
-        <select  name="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
+        <select  name="sub[<?php echo $subj;?>]" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
-        $displaysubData = $subdata['sub_name'];
+        $subj = $subdata['sub_name'];
         $sem=$subdata['sem'];
          ?>
-        <option style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" value="<?php echo $displaysubData;?>"><?php echo $displaysubData; ?></option>
-          
+        <option style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" value="<?php echo $subj;?>"><?php echo $subj; ?></option>
         <?php } ?>
         </select>
         <input type="hidden" name="sem" value="<?php echo $sem;?>">
