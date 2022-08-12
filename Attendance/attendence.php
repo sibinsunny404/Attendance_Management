@@ -142,10 +142,10 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
                 <link rel="stylesheet" href="css/submitbtt.css">
                 <div class="container">
                     <button class="button button-1" name="submit">Submit</button>
-                    <h3>Total Absent:</h3>
+                    <!-- <h3>Total Absent:</h3>
                     <h3 id="abse"></h3>
                     <h3>Total present: </h3>
-                </div>
+                </div> -->
                 <!-- Submit Button Ends Here -->
     </div>
 
