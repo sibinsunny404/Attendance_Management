@@ -35,7 +35,8 @@ mysqli_close($connect);
         function c(){
             
             if(document.getElementById("a").checked){
-                document.getElementById("a").style.backgroundColor="red"
+                // document.getElementById("a").style.backgroundColor="red"
+                alert("comfirm");
             }
         }
     </script>
@@ -62,17 +63,13 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
 <div class="loader"></div>
 <div style="border:0px;" class="header_fixed">
     <center>
-
- 
-  <br>
-        <br>
         <!-- form method -->
         <form method="POST">
         <h1 style="line-height:normal;">Student Attendense</h1>
         <!-- select Starts from here -->
         <h2> <label for="dub" style="line-height:normal;">Choose Sub</label></h2><br>
         <select  name="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
-        <option value="">---select  Subject---</option>
+        <option value=""><b>---select  Subject---</b></option>
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $subj = $subdata['sub_name'];
