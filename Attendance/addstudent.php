@@ -20,7 +20,12 @@
   <body>
 <center>
 <div class="container" style="padding-top: 125px;">
-    <div class="card" style="width: 50rem; border-color:crimson">
+    <div class="card" style="width: 50rem; border-color:crimson;
+   background: #BE93C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: radius 10%;
+">
   <div class="card-body">
     <form class="row g-3">
   <div class="col-md-6">
