@@ -8,10 +8,10 @@ $result = mysqli_query($connect, $query);
 // require_once 'data_retrive.php';
 if(isset($_POST['submit'])){
     foreach($_POST['attend'] as $ids=>$attend){
-       $usn= $_POST["usn"] [$ids];
-    //    $sub=$_POST["sub"] [$ids];
-    $subc = isset($_POST["sub"] ) ? $_POST["sub"]: '';
-    mysqli_query($connect,"insert into attendence (usn,attend,sub_code) values ('$usn','$attend','$subc')");
+       $usn= $_POST["usn"] [$ids] ;
+       $sub=$_POST["sub"] ;
+       $sem=$_POST["sem"] ;
+    mysqli_query($connect,"insert into attendence (usn,attend,sub_code,sem) values ('$usn','$attend','$sub','$sem')");
     }
     // echo $sub;
        
@@ -62,10 +62,17 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
 <div class="loader"></div>
 <div style="border:0px;" class="header_fixed">
     <center>
-        <h1 style="line-height:normal;">Student Attendense</h1>
 
-       <h2> <label for="dub" style="line-height:normal;">Choose Sub</label></h2><br>
+ 
+  <br>
+        <br>
+        <!-- form method -->
+        <form method="POST">
+        <h1 style="line-height:normal;">Student Attendense</h1>
+        <!-- select Starts from here -->
+        <h2> <label for="dub" style="line-height:normal;">Choose Sub</label></h2><br>
         <select  name="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" >
+        <option value="">---select  Subject---</option>
         <?php 
         while($subdata = mysqli_fetch_array($subresult)){
         $subj = $subdata['sub_name'];
@@ -74,15 +81,9 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
         <option style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center" value="<?php echo $subj;?>" name="<?php echo $subj;?>"><?php echo $subj; ?></option>
         <?php } ?>
         </select>
+          <!-- Select Tag ends Here -->
         <input type="hidden" name="sem" value="<?php echo $sem;?>">
         <h2>Sem:<?php echo $sem;?></h2>
-
-        <!-- subject Tag ends Here -->
- 
-  <!-- Select Tag ends Here -->
-  <br>
-        <br>
-        <form method="POST">
         <div class="table-responsive">
     <table >
             <thead >
@@ -108,10 +109,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
             </td>
                 
                 <td>
-                     <?php 
-                    $subc=$_POST["sub"]; 
-                    echo $subc;
-                    ?>
+                <?php echo $data['name']; ?>
                     
                 </td>
                 <td>
@@ -120,7 +118,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
                  <input type="radio" id="p" onclick="c()"  name="attend[<?php echo $data['usn']; ?>]"  value="present" checked> 
                  <span class="check"></span>
                  <label class="container" >A 
-                 <input type="radio" id="a" onclick="c()" name="attend[<?php echo $data['usn']; ?>]"  value="absent">
+                 <input type="radio" style="color:red;" id="a" onclick="c()" name="attend[<?php echo $data['usn']; ?>]"  value="absent">
                  <span class="check" ></span>
                </label>
                </label>
