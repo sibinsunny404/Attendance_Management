@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    <title>Dashboard</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -20,7 +20,21 @@
 
 </head> 
 
-<body class="app">   	
+<body class="app">   
+<script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="css/loader.css">
+    <div class="loader"></div>
+    <div style="border:0px;" class="header_fixed">	
     <header class="app-header fixed-top">	   	            
         <div class="app-header-inner">  
 	        <div class="container-fluid py-2">

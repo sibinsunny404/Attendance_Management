@@ -1,3 +1,10 @@
+<!-- Add student-->
+<?php
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +25,22 @@
     </style>
   </head>
   <body>
+  <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="css/loader.css">
+    <div class="loader" style="z-index:100;"></div>
+    <div style="border:0px;" class="header_fixed">
 <center>
+
 <div class="container" style="padding-top: 125px;">
     <div class="card" style="width: 50rem; border-color:crimson;
    background: #BE93C5;  /* fallback for old browsers */
@@ -26,55 +48,69 @@ background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-2
 background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 border: radius 10%;
 ">
+
   <div class="card-body">
+    
+  <h2 style="font-style:italic;">Enter The Student Detials</h2>
     <form class="row g-3">
+    <form method="POST">
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
+    <label for="name" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="name">
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
+    <label for="usn" class="form-label">USN</label>
+    <input type="text" class="form-control" id="usn">
+  </div>
+  <div class="col-md-4">
+    <label for="class" class="form-label">CLASS</label>
+    <select id="class" class="form-select">
+      <option selected>Choose...</option>
+      <option value="mca">MCA</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="sem" class="form-label">SEM</label>
+    <select id="sem" class="form-select">
+      <option selected>Choose...</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="dob" class="form-label">DOB</label>
+    <input type="date" class="form-control" id="dob">
+  </div>
+  <div class="col-md-4">
+    <label for="dst" class="form-label">District</label>
+    <select id="dst" class="form-select">
+      <option selected>Choose...</option>
+      <option value="dk">DK</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="state" class="form-label">State</label>
+    <select id="state" class="form-select">
+      <option selected>Choose...</option>
+      <option value="karnataka">Karnataka</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="mbno" class="form-label">Mobile Number</label>
+    <input type="text" class="form-control" id="mbno">
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" id="inputAddress" placeholder="Enter The full Address">
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">ADD</button>
   </div>
 </form>
     </div>
 
     </div>
 </div>
+</form>
 </center>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

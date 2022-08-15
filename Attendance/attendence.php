@@ -49,7 +49,7 @@ mysqli_close($connect);
 background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ">
-    <script>
+<script>
         window.addEventListener("load", () => {
             const loader = document.querySelector(".loader");
 
@@ -62,7 +62,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
     </script>
     <link rel="stylesheet" href="css/loader.css">
     <div class="loader"></div>
-    <div style="border:0px;" class="header_fixed">
+    <div style="border:0px;" class="header_fixed">  
         <center>
             <!-- form method -->
             <form method="POST">
