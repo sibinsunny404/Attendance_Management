@@ -47,6 +47,14 @@
 					<?php
 						}
 					?>
+
+					<?php
+						if(@$_GET['invalid']==true){
+					?>
+					<div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-danger text-center my-3"><?php echo $_GET['invalid']?></div>
+					<?php
+						}
+					?>
 					
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="uname" placeholder="Username">
