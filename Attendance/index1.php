@@ -26,9 +26,10 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
 </head>
 <body>
-	
+	<form method="POST" action="login_process.php">
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
@@ -36,13 +37,19 @@
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
-
 					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
+						Admin Log in
 					</span>
-
+					<?php
+						if(@$_GET['Empty']==true){
+					?>
+					<div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-danger text-center my-3"><?php echo $_GET['Empty']?></div>
+					<?php
+						}
+					?>
+					
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
+						<input class="input100" type="text" name="uname" placeholder="Username">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
@@ -54,15 +61,21 @@
 					
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" name="login">
 							Login
 						</button>
+					</div>
+
+					<div class="text-center p-t-90">
+						<a class="txt1" href="#">
+							Student Login->
+						</a>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	
+	</form>
 
 	<div id="dropDownSelect1"></div>
 	

@@ -24,6 +24,7 @@
   border-top-color: #009578;
   border-radius: 50%;
   animation: loading 0.85s ease infinite;
+
 }
 
 @keyframes loading {
