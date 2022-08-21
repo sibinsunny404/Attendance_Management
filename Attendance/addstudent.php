@@ -8,7 +8,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Add students</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -56,51 +56,51 @@ border: radius 10%;
     <form method="POST">
   <div class="col-md-6">
     <label for="name" class="form-label">Full Name</label>
-    <input type="text" class="form-control" id="name">
+    <input type="text" class="form-control" id="name" required>
   </div>
   <div class="col-md-6">
     <label for="usn" class="form-label">USN</label>
-    <input type="text" class="form-control" id="usn">
+    <input type="text" class="form-control" id="usn" required>
   </div>
   <div class="col-md-4">
     <label for="class" class="form-label">CLASS</label>
-    <select id="class" class="form-select">
+    <select id="class" class="form-select" required>
       <option selected>Choose...</option>
       <option value="mca">MCA</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="sem" class="form-label">SEM</label>
-    <select id="sem" class="form-select">
+    <select id="sem" class="form-select" required>
       <option selected>Choose...</option>
       <option value="2">2</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="dob" class="form-label">DOB</label>
-    <input type="date" class="form-control" id="dob">
+    <input type="date" class="form-control" id="dob" required>
   </div>
   <div class="col-md-4">
     <label for="dst" class="form-label">District</label>
-    <select id="dst" class="form-select">
+    <select id="dst" class="form-select" required>
       <option selected>Choose...</option>
       <option value="dk">DK</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="state" class="form-label">State</label>
-    <select id="state" class="form-select">
+    <select id="state" class="form-select" required>
       <option selected>Choose...</option>
       <option value="karnataka">Karnataka</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="mbno" class="form-label">Mobile Number</label>
-    <input type="text" class="form-control" id="mbno">
+    <input type="text" class="form-control" id="mbno" required>
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter The full Address">
+    <input type="text" class="form-control" id="inputAddress" placeholder="Enter The full Address" required>
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">ADD</button>

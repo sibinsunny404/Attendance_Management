@@ -20,6 +20,3 @@ if(isset($_POST['login'])){
 else{
     echo "not working";
 }
-
-
-?>
