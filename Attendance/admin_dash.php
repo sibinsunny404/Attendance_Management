@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -141,7 +143,17 @@
 								<li><a class="dropdown-item" href="account.html">Account</a></li>
 								<li><a class="dropdown-item" href="settings.html">Settings</a></li>
 								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="logout.php?logout">Log Out</a></li>
+								<li>
+								<?php
+									session_start();
+									if(isset($_SESSION['user'])){
+										echo '<a href="logout.php?logout">Logout</a>';
+									}
+									else{
+										header("location:index.php");
+									}
+								?>
+								</li>
 							</ul>
 			            </div><!--//app-user-dropdown--> 
 		            </div><!--//app-utilities-->
@@ -154,7 +166,7 @@
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding">
-		            <a class="app-logo" href="404.html"><img class="logo-icon me-2" src="assets/images/users/user-1.png" alt="logo"><span class="logo-text">Dashboard</span></a>
+		            <a class="app-logo" href="404.html"><img class="logo-icon me-2" src="assets/images/users/user-1.png" alt="logo"><span class="logo-text"><?php echo $_SESSION['user'];?></span></a>
 	
 		        </div><!--//app-branding-->  
 		        
@@ -207,6 +219,19 @@
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
 					    
+						<li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link" href="logout.php?logout">
+						        <span class="nav-icon">
+									<img style="height: 20px;width:20px;" src="assets/images/extra/att.png" alt="">
+						         </span>
+		                         <span class="nav-link-text">Logout</span>
+					        </a><!--//nav-link-->
+					    </li>
+					    </li>
+
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link" href="help.html">

@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
      else{
         $query="select * from admin where admin_uname='".$_POST['uname']."' and passwd='".$_POST['pass']."'";
         $result=mysqli_query($connect,$query);
-        if(mysqli_fetch_array($result)){
+        if(mysqli_fetch_assoc($result)){
             $_SESSION['user']=$_POST['uname'];
             header("location:admin_dash.php");
         }
