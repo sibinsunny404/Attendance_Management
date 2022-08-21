@@ -18,5 +18,5 @@ if(isset($_POST['login'])){
     }
 }
 else{
-    echo "not working";
+    header("location:index.php");
 }

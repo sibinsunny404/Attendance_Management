@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $usn = $_POST["usn"][$ids];
         $sub = $_POST["sub"];
         $sem = $_POST["sem"];
-        mysqli_query($connect, "insert into attendence (usn,attend,sub_code,sem) values ('$usn','$attend','$sub','$sem')");
+        mysqli_query($connect, "insert into attendence (usn,attend,subject,sem) values ('$usn','$attend','$sub','$sem')");
     }
     // echo $sub;
 
