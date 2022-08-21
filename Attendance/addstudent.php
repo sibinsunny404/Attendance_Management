@@ -37,6 +37,11 @@
 
         }
     </style>
+    <script>
+            function done(){
+                alert("Student Detials Successfully Added...");
+            }
+        </script>
   </head>
   <body>
   <script>
@@ -117,7 +122,7 @@ border: radius 10%;
     <input type="text" class="form-control" id="add" placeholder="Enter The full Address" name="add" required>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary" name="add">ADD</button>
+    <button type="submit" class="btn btn-primary" name="add" onclick="done()">ADD</button>
   </div>
       </div>
     </div>
