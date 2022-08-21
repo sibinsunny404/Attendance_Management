@@ -1,4 +1,5 @@
 <?php
+require_once 'sessions.php';
 require_once 'database/connection.php';
 require_once 'database/data_retrive.php';
 $query = "SELECT * FROM students";
