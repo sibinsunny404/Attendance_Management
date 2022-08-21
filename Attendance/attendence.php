@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
         $sub = $_POST["sub"];
         $sem = $_POST["sem"];
         mysqli_query($connect, "insert into attendence (usn,attend,subject,sem) values ('$usn','$attend','$sub','$sem')");
+        header("location:admin_dash.php?attend=success");
     }
     // echo $sub;
 

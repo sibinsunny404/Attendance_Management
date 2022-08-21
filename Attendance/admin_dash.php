@@ -29,7 +29,7 @@ if (isset($_SESSION['user'])) {
 
 	<!-- App CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body class="app">
@@ -44,6 +44,27 @@ if (isset($_SESSION['user'])) {
 			});
 		});
 	</script>
+	<?php
+		if(@$_GET['adds']==true){
+	?>
+	<Script>
+		alert("Successfully Added Student Detials");
+	</Script>
+	<?php
+		}
+	?>
+	
+	<!-- attendace toast -->
+	<?php
+		if(@$_GET['attend']==true){
+	?>
+	<Script>
+		alert("Successfully Attandace Taked");
+	</Script>
+	<?php
+		}
+	?>
+<!-- toast ends here -->
 	<link rel="stylesheet" href="css/loader.css">
 	<div class="loader"></div>
 	<div style="border:0px;" class="header_fixed">
@@ -342,6 +363,10 @@ if (isset($_SESSION['user'])) {
 
 			<!-- Page Specific JS -->
 			<script src="assets/js/app.js"></script>
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
 </body>
 

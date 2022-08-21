@@ -1,6 +1,23 @@
 <!-- Add student-->
 <?php
   require_once 'sessions.php';
+  require_once 'database/connection.php';
+  if (isset($_POST['add'])) {
+        $name = $_POST["uname"];
+        $usn = $_POST["usn"];
+        $cls = $_POST["class"];
+        $sem = $_POST["sem"];
+        $dstr = $_POST["dst"];
+        $dob = $_POST["dob"];
+        $state = $_POST["state"];
+        $mbno = $_POST["mbno"];
+        $add = $_POST["add"];
+        mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address) 
+        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add')");
+        header("location:admin_dash.php?adds=student added success");
+    }
+//  $name=$_POST['uname'];
+//  echo $name;
 ?>
 <!doctype html>
 <html lang="en">
@@ -37,7 +54,7 @@
     <div class="loader" style="z-index:100;"></div>
     <div style="border:0px;" class="header_fixed">
 <center>
-
+<form method="POST">
 <div class="container" style="padding-top: 125px;">
     <div class="card" style="width: 50rem; border-color:crimson;
    background: #BE93C5;  /* fallback for old browsers */
@@ -49,66 +66,67 @@ border: radius 10%;
   <div class="card-body">
     
   <h2 style="font-style:italic;">Enter The Student Detials</h2>
-    <form class="row g-3">
-    <form method="POST">
+    <div class="row g-3">
+ 
   <div class="col-md-6">
     <label for="name" class="form-label">Full Name</label>
-    <input type="text" class="form-control" id="name" required>
+    <input type="text" class="form-control" id="name" name="uname" required>
   </div>
   <div class="col-md-6">
     <label for="usn" class="form-label">USN</label>
-    <input type="text" class="form-control" id="usn" required>
+    <input type="text" class="form-control" id="usn" name="usn" required>
   </div>
   <div class="col-md-4">
     <label for="class" class="form-label">CLASS</label>
-    <select id="class" class="form-select" required>
+    <select id="class" class="form-select" name="class" required>
       <option selected>Choose...</option>
       <option value="mca">MCA</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="sem" class="form-label">SEM</label>
-    <select id="sem" class="form-select" required>
+    <select id="sem" class="form-select" name="sem" required>
       <option selected>Choose...</option>
       <option value="2">2</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="dob" class="form-label">DOB</label>
-    <input type="date" class="form-control" id="dob" required>
+    <input type="date" class="form-control" id="dob" name="dob" required>
   </div>
   <div class="col-md-4">
     <label for="dst" class="form-label">District</label>
-    <select id="dst" class="form-select" required>
+    <select id="dst" class="form-select" name="dst" required>
       <option selected>Choose...</option>
       <option value="dk">DK</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="state" class="form-label">State</label>
-    <select id="state" class="form-select" required>
+    <select id="state" class="form-select" name="state" required>
       <option selected>Choose...</option>
       <option value="karnataka">Karnataka</option>
     </select>
   </div>
   <div class="col-md-4">
     <label for="mbno" class="form-label">Mobile Number</label>
-    <input type="text" class="form-control" id="mbno" required>
+    <input type="text" class="form-control" id="mbno" name="mbno" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter The full Address" required>
+    <label for="add" class="form-label">Address</label>
+    <input type="text" class="form-control" id="add" placeholder="Enter The full Address" name="add" required>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">ADD</button>
+    <button type="submit" class="btn btn-primary" name="add">ADD</button>
   </div>
-</form>
+      </div>
     </div>
 
     </div>
 </div>
-</form>
+
 </center>
+</form>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
