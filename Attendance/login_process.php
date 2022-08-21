@@ -10,7 +10,7 @@ if(isset($_POST['login'])){
         $result=mysqli_query($connect,$query);
         if(mysqli_fetch_assoc($result)){
             $_SESSION['user']=$_POST['uname'];
-            header("location:admin_dash.php");
+            header("location:welcome.php");
         }
         else{
             header("location:index.php?invalid=Enter The Valid Credentials");
