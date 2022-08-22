@@ -50,7 +50,11 @@ style="background: #355C7D;  /* fallback for old browsers */
 	<div class="loader"></div>
 	<div style="border:0px;" class="header_fixed">
 		<header class="app-header fixed-top">
-			<div class="app-header-inner">
+			<div class="app-header-inner"
+			style="background: #355C7D;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */"
+			>
 				<div class="container-fluid py-2">
 					<div class="app-header-content">
 						<div class="row justify-content-between align-items-center">
