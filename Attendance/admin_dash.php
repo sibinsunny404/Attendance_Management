@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['user'])) {
-	
+	echo 'login sucess';
 } else {
 	header("location:index.php");
 }
@@ -180,17 +180,8 @@ style="background: #355C7D;  /* fallback for old browsers */
 								<!--//app-utility-item-->
 
 								<div class="app-utility-item app-user-dropdown dropdown">
-									<a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/users/user-1.png" alt="user profile"></a>
-									<ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-										<li><a class="dropdown-item" href="account.html">Account</a></li>
-										<li><a class="dropdown-item" href="settings.html">Settings</a></li>
-										<li>
-											<hr class="dropdown-divider">
-										</li>
-										<li>
-										<a class="dropdown-item" href="logout.php?logout">Logout</a>
-										</li>
-									</ul>
+									<h5><a style="color:red;font-weight: 600;" href="logout.php?logout"><img src="assets/images/users/logout.png"  alt="user profile">LOGOUT</a></h5>
+									
 								</div>
 								<!--//app-user-dropdown-->
 							</div>
