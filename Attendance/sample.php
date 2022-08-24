@@ -14,10 +14,10 @@
 
 <body>
   <?php
-   
-echo '<script type ="text/JavaScript">';  
-echo 'alert("JavaScript Alert Box by PHP")';  
-echo '</script>';  
+
+  echo '<script type ="text/JavaScript">';
+  echo 'alert("JavaScript Alert Box by PHP")';
+  echo '</script>';
 
   ?>
   <!-- <a class="dropdown-item" href="logout.php?logout">Logout</a> --> -->
