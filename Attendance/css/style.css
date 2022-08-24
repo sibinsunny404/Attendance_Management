@@ -8,10 +8,10 @@
 
 body {
     width: 100%;
-    display:block;
+    display: block;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    background-color:rgba(0, 255, 255, 0.675);
+    background-color: rgba(0, 255, 255, 0.675);
 }
 
 table {
@@ -41,7 +41,7 @@ td {
     border-bottom: 1px solid #dddddd;
     padding: 20px 30px;
     font-size: 20px;
-   
+
 }
 
 td img {
@@ -52,17 +52,23 @@ td img {
 }
 
 tr:nth-child(even) {
-    background: #DAE2F8;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #DAE2F8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D6A4A4, #DAE2F8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    
+
 }
 
 tr:nth-child(odd) {
-    background: #9796f0;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #9796f0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fbc7d4, #9796f0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -83,6 +89,7 @@ td button {
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 /* .option-input:checked::after{
     animation: click-wave 0.75s;
     background: #40e0d0;
@@ -108,10 +115,11 @@ td button {
 } */
 .input[type="checkbox"]::before {
     /* ...existing styles */
-  
+
     /* Windows High Contrast Mode */
     background-color: CanvasText;
-  }
+}
+
 /* ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
