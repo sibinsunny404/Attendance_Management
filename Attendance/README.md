@@ -1,2 +1,1 @@
 # Student Attendance Project
-#
