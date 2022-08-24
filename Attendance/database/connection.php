@@ -12,4 +12,3 @@ if($connect){
 else{
     die("connection not done yet");
 }
-?>
