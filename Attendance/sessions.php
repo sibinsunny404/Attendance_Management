@@ -12,4 +12,3 @@ if ($now > $_SESSION['expire']) {
 } else {
 	// nothing planned
 }
-?>
