@@ -21,13 +21,11 @@ require_once 'sessions.php';
 
 	<!-- App CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
-    </head>
+</head>
 
-<body class="app"
-style="background: #355C7D;  /* fallback for old browsers */
+<body class="app" style="background: #355C7D;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */"
->
+            background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
 	<script>
 		window.addEventListener("load", () => {
 			const loader = document.querySelector(".loader");
@@ -43,11 +41,9 @@ style="background: #355C7D;  /* fallback for old browsers */
 	<div class="loader"></div>
 	<div style="border:0px;" class="header_fixed">
 		<header class="app-header fixed-top">
-			<div class="app-header-inner"
-			style="background: #355C7D;  /* fallback for old browsers */
+			<div class="app-header-inner" style="background: #355C7D;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */"
-			>
+            background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
 				<div class="container-fluid py-2">
 					<div class="app-header-content">
 						<div class="row justify-content-between align-items-center">
@@ -169,8 +165,8 @@ style="background: #355C7D;  /* fallback for old browsers */
 								<!--//app-utility-item-->
 
 								<div class="app-utility-item app-user-dropdown dropdown">
-									<a style="color:red;font-weight: 600; font-size:small;" href="logout.php?logout"><img src="assets/images/users/logout.png"  alt="user profile" style="height:23px; width:23px;">LOGOUT</a>
-									
+									<a style="color:red;font-weight: 600; font-size:small;" href="logout.php?logout"><img src="assets/images/users/logout.png" alt="user profile" style="height:23px; width:23px;">LOGOUT</a>
+
 								</div>
 								<!--//app-user-dropdown-->
 							</div>
@@ -328,10 +324,10 @@ style="background: #355C7D;  /* fallback for old browsers */
 
 			<!-- Page Specific JS -->
 			<script src="assets/js/app.js"></script>
-<!-- Bootstrap JavaScript Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+			<!-- Bootstrap JavaScript Libraries -->
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
 </body>
 
