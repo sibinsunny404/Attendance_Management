@@ -31,21 +31,27 @@
   0% {
     border-top-color: #ee6055;
   }
+
   25% {
     border-top-color: #60d394;
   }
+
   50% {
     border-top-color: #aaf683;
   }
+
   75% {
     border-top-color: #ffd97d;
   }
+
   100% {
     border-top-color: #ff9b85;
   }
+
   from {
     transform: rotate(0turn);
   }
+
   to {
     transform: rotate(1turn);
   }
