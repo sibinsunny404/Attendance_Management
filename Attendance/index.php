@@ -56,6 +56,15 @@
 						}
 					?>
 					
+					<?php
+						if(@$_GET['sexpired']==true){
+					?>
+					
+					<div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-danger text-center my-3"><?php echo $_GET['sexpired']?></div>
+					<?php
+						}
+					?>
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="uname" placeholder="Username">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>

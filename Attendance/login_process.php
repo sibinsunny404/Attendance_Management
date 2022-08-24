@@ -10,6 +10,10 @@ if(isset($_POST['login'])){
         $result=mysqli_query($connect,$query);
         if(mysqli_fetch_assoc($result)){
             $_SESSION['user']=$_POST['uname'];
+            // sessin start time
+            $_SESSION['start']=time();
+            // tacking session start time
+            $_SESSION['expire']=$_SESSION['start'] + (30*60);
             header("location:admin_dash.php");
         }
         else{
