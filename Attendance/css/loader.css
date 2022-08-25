@@ -21,39 +21,29 @@
   content: "";
   width: 75px;
   height: 75px;
-  border: 5px solid #dddddd;
+  border: 2px solid #dddddd;
   border-top-color: #009578;
-  border-radius: 50%;
+  border-radius: 0%;
   animation: loading 0.85s ease infinite;
 
 }
 
 @keyframes loading {
-  0% {
-    border-top-color: #ee6055;
-  }
-
-  25% {
-    border-top-color: #60d394;
-  }
-
-  50% {
-    border-top-color: #aaf683;
-  }
-
-  75% {
-    border-top-color: #ffd97d;
-  }
-
-  100% {
-    border-top-color: #ff9b85;
-  }
-
-  from {
-    transform: rotate(0turn);
-  }
-
-  to {
-    transform: rotate(1turn);
-  }
+  0% { transform: rotate(100deg);
+    border-top: 20px solid skyblue;
+    align-items: center;
+    }
+    20%{transform: rotate3d(900deg);
+    border-top: 20px solid blue;
+  
+    }
+    40%{transform: rotate3d(1800deg);
+    border-top: 20px solid red;
+    }
+    60%{transform: rotate3d(2600deg);
+    border-top: 20px solid pink;
+    }
+    100% { transform: rotate(3600deg); 
+    border-top:20px solid green;
+    }
 }
