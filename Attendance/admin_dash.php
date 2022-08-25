@@ -1,5 +1,6 @@
 <?php
 require_once 'sessions.php';
+require_once 'database/data_for_home.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
