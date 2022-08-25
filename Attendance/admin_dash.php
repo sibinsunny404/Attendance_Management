@@ -316,8 +316,13 @@ require_once 'database/data_for_home.php';
                 <div class="align-self-center">
                   <i class="font-large-2 float-left"><img style="height: 2cm; weight: 2cm;" src="assets/images/extra/students.png" alt=""></i>
                 </div>
+				<?php
+				while ($subdata = mysqli_fetch_array($subresult)) {
+                        $scount = $subdata['count(*)'];
+				}
+                    ?>
                 <div class="media-body text-right">
-                  <h3>278</h3>
+                  <h3 style="font-weight:500;"><?php echo $scount ?></h3>
                   <span>Number of Students</span>
                 </div>
               </div>
