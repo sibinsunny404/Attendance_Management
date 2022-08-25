@@ -279,7 +279,7 @@ require_once 'sessions.php';
 							<h3 class="mb-3">Welcome <?php echo $_SESSION['user']; ?></h3>
 							<div class="row gx-5 gy-3">
 								<div class="col-12 col-lg-12">
-									<div>Welcome to The is the student attendace management system,</div>
+									<div>Welcome to The student attendace system,This is The New System to take and manage Attendance</div>
 								</div>
 								<!--//col-->
 								<div class="col-12 col-lg-3">
@@ -313,11 +313,11 @@ require_once 'sessions.php';
             <div class="card-body">
               <div class="media d-flex">
                 <div class="align-self-center">
-                  <i class="icon-pencil primary font-large-2 float-left"></i>
+                  <i class="font-large-2 float-left"><img style="height: 2cm; weight: 2cm;" src="assets/images/extra/students.png" alt=""></i>
                 </div>
                 <div class="media-body text-right">
                   <h3>278</h3>
-                  <span>New Posts</span>
+                  <span>Number of Students</span>
                 </div>
               </div>
             </div>
