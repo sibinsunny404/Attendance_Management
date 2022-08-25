@@ -26,19 +26,9 @@ require_once 'sessions.php';
 <body class="app" style="background: #355C7D;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
-	<script>
-		window.addEventListener("load", () => {
-			const loader = document.querySelector(".loader");
-
-			loader.classList.add("loader--hidden");
-
-			loader.addEventListener("transitionend", () => {
-				document.body.removeChild(loader);
-			});
-		});
-	</script>
-	<link rel="stylesheet" href="css/loader.css">
-	<div class="loader"></div>
+	<?php
+		require_once 'loader.html';
+	?>
 	<div style="border:0px;" class="header_fixed">
 		<header class="app-header fixed-top">
 			<div class="app-header-inner" style="background: #355C7D;  /* fallback for old browsers */
@@ -309,9 +299,32 @@ require_once 'sessions.php';
 				</div>
 				<!--//col-->
 
-					
+				<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-			</div>
+
+    <div class="row">
+      <div class="col-xl-3 col-sm-6 col-12"> 
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <i class="icon-pencil primary font-large-2 float-left"></i>
+                </div>
+                <div class="media-body text-right">
+                  <h3>278</h3>
+                  <span>New Posts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 			<!--//app-wrapper-->
 
 
