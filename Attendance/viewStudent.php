@@ -1,3 +1,6 @@
+<?php
+  require_once 'database/data_retrive.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,7 +14,10 @@
 
   </head>
   <body>
-    
+  <?php
+ while ($subdata = mysqli_fetch_array($viewstures)) {
+ $scount = $subdata['name'];
+ ?>
     <div class="container">
   <div class="row">
   <div class="col-sm-3">
@@ -24,7 +30,9 @@
     </div>
   </div>
   </div>
-
+  <?php
+ }
+?>
   </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

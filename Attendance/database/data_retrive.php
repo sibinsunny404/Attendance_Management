@@ -5,3 +5,6 @@ require_once 'connection.php';
 
 $subquery = "SELECT sub_name,sem,sub_code FROM subjects ";
 $subresult = mysqli_query($connect, $subquery);
+
+$viewStu = "select * from students";
+$viewstures = mysqli_query($connect,$viewStu);
