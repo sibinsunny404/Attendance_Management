@@ -50,6 +50,11 @@ if (isset($_POST['add'])) {
     });
         });
   </script> -->
+<script>
+  function add(){
+    alert("student added Successfully")
+  }
+</script>
 </head>
 
 <body>
@@ -127,7 +132,7 @@ border: radius 10%;
                   <input type="text" class="form-control" id="add" placeholder="Enter The full Address" name="add" required>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary" id="submit" name="submit">ADD</button>
+                  <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="add()">ADD</button>
                 </div>
               </div>
             </div>
