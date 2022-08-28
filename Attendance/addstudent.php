@@ -32,29 +32,26 @@ if (isset($_POST['add'])) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <style>
     body {
-      background: #355C7D;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-color: #8EC5FC;
+      background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
     }
   </style>
   <script src="jquery-3.6.0.min.js"></script>
 
-  <!-- <script>
+  <script>
   $(function(){
   //   $("#name").keyup(function(){
-  $('#name, #usn, #mbno,#add').keyup(function(){
+  $('#add').keyup(function(){
       $("#submit").removeAttr('disabled');
     });
         });
-  </script> -->
-<script>
-  function add(){
-    alert("student added Successfully")
-  }
-</script>
+  </script>
+  <script>
+    function ad() {
+      alert("student added Successfully")
+    }
+  </script>
 </head>
 
 <body>
@@ -132,7 +129,7 @@ border: radius 10%;
                   <input type="text" class="form-control" id="add" placeholder="Enter The full Address" name="add" required>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="add()">ADD</button>
+                  <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="ad()" disabled>ADD</button>
                 </div>
               </div>
             </div>
