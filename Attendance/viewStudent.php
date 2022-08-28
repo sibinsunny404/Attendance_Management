@@ -9,7 +9,7 @@ require_once 'sessions.php';
   <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=1024">
   <!-- Bootstrap CSS v5.2.0-beta1 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <style>
@@ -33,7 +33,8 @@ require_once 'sessions.php';
       text-decoration-style: wavy;
     }
     img{
-      align-content: right; height: 100px;width: 90px;
+      float: right; height: 100px;width: 90px;
+      text-align: left;
     }
   </style>
 </head>
