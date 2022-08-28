@@ -89,18 +89,9 @@ require_once 'database/data_for_home.php';
      </li>
     </ul>
   </div>
-  <section class="home-section">
+  <!-- <section class="home-section">
       <div class="text">Dashboard</div>
-      <?php
-				while ($subdata = mysqli_fetch_array($subresult)) {
-                        $scount = $subdata['count(*)'];
-				}
-                    ?>
-                <div class="media-body text-right">
-                  <h3 style="font-weight:500;"><?php echo $scount ?></h3>
-                  <span>Number of Students</span>
-                </div>
-  </section>
+  </section> -->
 
   <script src="js/script.js"></script>
 
