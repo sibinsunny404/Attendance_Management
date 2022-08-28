@@ -26,21 +26,25 @@ require_once 'sessions.php';
       text-transform: uppercase;
       font-weight: 200;
       text-align: center;
-      color:black;
+      color: black;
       background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
       display: block;
       border-radius: 10px;
       text-decoration-style: wavy;
     }
-    img{
-      float: right; height: 100px;width: 90px;
+
+    img {
+      float: right;
+      height: 100px;
+      width: 90px;
       text-align: left;
     }
   </style>
 </head>
+
 <body>
-<?php
-    require_once 'loader.html';
+  <?php
+  require_once 'loader.html';
   ?>
   <div class="container">
     <h1>Student Detials</h1>
@@ -52,7 +56,7 @@ require_once 'sessions.php';
         <div class="col-3" style="padding-bottom: 20px;">
           <div class="card">
             <div class="card-body">
-            <img src="student_image/<?php echo $subdata['image']; ?>">
+              <img src="student_image/<?php echo $subdata['image']; ?>">
               <h5 class="card-title"><?php echo $name ?></h5>
               <p class="card-text"><?php echo $subdata['usn'] ?></p>
               <a href="#" class="btn btn-primary">View</a>
