@@ -23,9 +23,10 @@ require_once 'database/data_retrive.php';
 
     h1 {
       text-align: center;
-      color: white;
-      background: grey;
+      color:black;
+      background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
       display: block;
+      border-radius: 10px;
     }
   </style>
 </head>
