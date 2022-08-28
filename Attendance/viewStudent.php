@@ -38,7 +38,6 @@ require_once 'sessions.php';
     }
   </style>
 </head>
-
 <body>
 <?php
     require_once 'loader.html';
