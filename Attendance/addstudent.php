@@ -1,7 +1,7 @@
 <!-- Add student-->
 <?php
-require_once 'sessions.php';
-require_once 'database/connection.php';
+require_once '../sessions.php';
+require_once '../database/';
 if (isset($_POST['add'])) {
   $name = $_POST["uname"];
   $usn = $_POST["usn"];
