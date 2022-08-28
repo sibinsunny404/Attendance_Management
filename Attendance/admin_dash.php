@@ -48,7 +48,7 @@ require_once 'database/data_for_home.php';
         <span class="tooltip">Add Students</span>
       </li>
       <li>
-        <a href="#">
+        <a href="viewStudent.php">
         <i class='bx bxs-user-detail'></i>
           <span class="links_name">View Students</span>
         </a>
