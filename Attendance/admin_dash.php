@@ -84,7 +84,7 @@ require_once 'database/data_for_home.php';
       </li>
       <li class="profile">
         <div class="profile-details">
-          <img src="/images/icons/" alt="profileImg">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAAAXNSR0IArs4c6QAAA59JREFUeF7tmo1tFDEQhZ1KIJVAKgmpBKgEqCShEqAS0JNugvU0v9693Ys0K50uUny7ns/vzYx9dzf6eiVw1yz+E2gYkxquAeP95f54/315vQkB7gEDQX8aY3wYY3w0ohYoPy5wXm6RzhYYCPzbGEOUUIkPcJ7GGDcFZQUGggcESwVvFkoVxpcxxmcnWrED3v+MMd5NyvEsBPvg3qdeFRjPhhoQOIL5HiRLKApAAFOz1tezgWRhaCAEQnVFPSi45/1Z8sjA0EAg8T1snLRUIbYdFIbkevgVwdByhCdnCRCBoNRipX9eqgb+1q7qM64GyYMBf0MV8+WB8JJrZCn+7Cml14PB9vCsYSVXXkUvJ6Bco3mTaw8rllRkwWBVVIKIJmDlBFgMUOdKg7x0WGNmweCVRkJDEHxZVprHYrXnJOlZAGOhELkOrS4WjL/JCbG0rZzCOcGygNbdHqYODQavjqUK8PpFsrbgIkiMzeQDBndYM6ZNni2CJsgqi7OCooQ339eTfwVclJ9K/9dgZFeblRH5u3LfLLhSsNFgDca82lE3yCqy/M2JtnrfqDmM4kz9nx/CEo0mrWV/AJltpSVFLw9h4pyYPaumAs0MYhi8glHy0gIFiLk3mBspzCmyE8ZwEj2komxVBiau9RreQmQCuwllIIhKhZCgpbHyjgAr+w2GcUrOqFaIWQHWljzapGkqmitPxlaZlBCOyfQZGVnzgwAGr9V9RaWihUFmB2Q60CiJ4llyeoV3nHtqV3SuMVtu3p9ElScbazhOg8HlNeoWeSPmPVQqDQBbXW2lAw4DrAzYsmutVpF5XlYe4b4l6nMqsYZjV88ztoCQSWlAuGU/zCKYlLfL5C+KZJXYRhIcpI+Eqcl/PhFnhUjHWjlZC1d5ZYBXv7WgETB/p4rguQW35qKdZgEgkiufkq9UsRUGr5+Jmhn2sPaw6qQ1IHzfTAXbFLj24QgGJo4V4/2F3Gs1wXkn6dG5yO4Q5IYRDOkhrPK5uoLcbst8TgPhJVCmb7XaGFf5rtXrSU4FUYEhcFa/hY9+vrCqsF0tk7GJphL+fmN1UpWd7Ooz0p9bgSF5BKv9uPijlZWdbDqo1YGrMObnZX7TVcktq7Fs/tweMDQbiXrklzybJ3rEDa4B44h5X+UZDWPC2jAahu6yVkYro5URVqC2SdukbdI2CQm0TdomoUi6mrRN2iZtk5BA26RtEoqkq0nbpG3SNgkJtE3aJqFI/gHG1OhEUiXe4AAAAABJRU5ErkJggg=="/>
           <div class="name_job">
             <div class="name"><?php echo $_SESSION['user']; ?></div>
             <div class="job">Controller</div>
