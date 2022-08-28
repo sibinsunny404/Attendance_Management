@@ -12,117 +12,14 @@
 
 </head>
 
-<body style="background-color: black;">
+<body style="background-color: white;">
 <?php
-require_once 'admin_dash.php'
+require_once 'database/connection.php';
 ?>
-<div class="row">
-      <div class="col-xl-3 col-sm-6 col-12"> 
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body">
-              <div class="media d-flex">
-                <div class="align-self-center">
-                  <i class="icon-pencil primary font-large-2 float-left"></i>
-                </div>
-                <div class="media-body text-right">
-                  <h3>278</h3>
-                  <span>New Posts</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-sm-6 col-12">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body">
-              <div class="media d-flex">
-                <div class="align-self-center">
-                  <i class="icon-speech warning font-large-2 float-left"></i>
-                </div>
-                <div class="media-body text-right">
-                  <h3>156</h3>
-                  <span>New Comments</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-sm-6 col-12">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body">
-              <div class="media d-flex">
-                <div class="align-self-center">
-                  <i class="icon-graph success font-large-2 float-left"></i>
-                </div>
-                <div class="media-body text-right">
-                  <h3>64.89 %</h3>
-                  <span>Bounce Rate</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-sm-6 col-12">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body">
-              <div class="media d-flex">
-                <div class="align-self-center">
-                  <i class="icon-pointer danger font-large-2 float-left"></i>
-                </div>
-                <div class="media-body text-right">
-                  <h3>423</h3>
-                  <span>Total Visits</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="row">
-      <div class="col-xl-3 col-sm-6 col-12">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body">
-              <div class="media d-flex">
-                <div class="media-body text-left">
-                  <h3 class="danger">278</h3>
-                  <span>New Projects</span>
-                </div>
-                <div class="align-self-center">
-                  <i class="icon-rocket danger font-large-2 float-right"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-sm-6 col-12">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body">
-              <div class="media d-flex">
-                <div class="media-body text-left">
-                  <h3 class="success">156</h3>
-                  <span>New Clients</span>
-                </div>
-                <div class="align-self-center">
-                  <i class="icon-user success font-large-2 float-right"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
+<form action="" method="POST" enctype="multipart/form-data">
+<input type="file" name="image" id="image">
+<input type="submit" name="submit" id="submit" value="upload">
+</form>
   <!-- <a class="dropdown-item" href="logout.php?logout">Logout</a> --> 
 
   <!-- Bootstrap JavaScript Libraries -->
@@ -132,3 +29,9 @@ require_once 'admin_dash.php'
 </body>
 
 </html>
+<?php
+if(isset($_POST['submit'])){
+  $file = addslashes(file_get_contents($_FILES["image"]["temp_name"]));
+mysqli_query($connect, "insert into image (`image`)  values ('$file')");
+}
+?>

@@ -1,5 +1,6 @@
 <?php
 require_once 'database/data_retrive.php';
+require_once 'sessions.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -45,6 +46,7 @@ require_once 'database/data_retrive.php';
         <div class="col-3" style="padding-bottom: 20px;">
           <div class="card">
             <div class="card-body">
+              <img style=" float:right; height: 50px;width: 50px;" src="assets/images/extra/students.png" alt="">
               <h5 class="card-title"><?php echo $name ?></h5>
               <p class="card-text"><?php echo $subdata['usn'] ?></p>
               <a href="#" class="btn btn-primary">View</a>
