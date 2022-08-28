@@ -84,7 +84,7 @@ require_once 'database/data_for_home.php';
       </li>
       <li class="profile">
         <div class="profile-details">
-        <img style="height: 50px;width:50px;" src="assets/images/extra/linux.png" alt="">
+        <img style="height: 50px;width:50px;background-color: white;" src="assets/images/extra/tux-logo-24.png" alt="">
          <div class="name_job">
             <div class="name"><?php echo $_SESSION['user']; ?></div>
             <div class="job">Controller</div>
