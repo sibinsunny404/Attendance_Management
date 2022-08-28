@@ -33,7 +33,7 @@ require_once 'sessions.php';
       text-decoration-style: wavy;
     }
     img{
-      float:right; height: 100px;width: 90px;
+      align-content: right; height: 100px;width: 90px;
     }
   </style>
 </head>
