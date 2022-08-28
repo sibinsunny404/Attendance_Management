@@ -16,10 +16,13 @@ require_once 'database/data_for_home.php';
 </head>
 
 <body>
+  <?php
+    require_once 'loader.html';
+  ?>
   <div class="sidebar">
     <div class="logo-details">
-    <i class='bx bxs-user-circle'></i>
-      <div class="logo_name"></div>
+    <i class='bx bxs-user-circle icon'></i>
+      <div class="logo_name"><?php echo $_SESSION['user']; ?></div>
       <i class='bx bx-menu' id="btn"></i>
     </div>
     <ul class="nav-list">
@@ -31,14 +34,14 @@ require_once 'database/data_for_home.php';
         <span class="tooltip">Dashboard</span>
       </li>
       <li>
-        <a href="#">
+        <a href="attendence.php">
         <i class='bx bx-list-check'></i>
           <span class="links_name">Take Attendance</span>
         </a>
         <span class="tooltip">Attandance</span>
       </li>
       <li>
-        <a href="#">
+        <a href="addstudent.php">
         <i class='bx bxs-user-plus'></i>
           <span class="links_name">Add Students</span>
         </a>
@@ -81,13 +84,15 @@ require_once 'database/data_for_home.php';
       </li>
       <li class="profile">
         <div class="profile-details">
-          <img src="profile.jpg" alt="profileImg">
+          <img src="/images/icons/" alt="profileImg">
           <div class="name_job">
-            <div class="name">Prem Shahi</div>
-            <div class="job">Web designer</div>
+            <div class="name"><?php echo $_SESSION['user']; ?></div>
+            <div class="job">Controller</div>
           </div>
         </div>
+        <a href="logout.php?logout">
         <i class='bx bx-log-out' id="log_out"></i>
+        </a>
       </li>
     </ul>
   </div>
