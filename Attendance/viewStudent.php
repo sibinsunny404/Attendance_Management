@@ -40,6 +40,9 @@ require_once 'sessions.php';
 </head>
 
 <body>
+<?php
+    require_once 'loader.html';
+  ?>
   <div class="container">
     <h1>Student Detials</h1>
     <div class="row mt-3 form-group">
