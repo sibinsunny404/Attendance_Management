@@ -8,35 +8,39 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+    <style>
+      p{
+        text-transform: uppercase;
+      }
+    </style>
   </head>
   <body>
+  <div class="container">
+  <div class="row mt-3 form-group" style="">
   <?php
  while ($subdata = mysqli_fetch_array($viewstures)) {
- $scount = $subdata['name'];
- ?>
-    <div class="container">
-  <div class="row">
-  <div class="col-sm-3">
+ $name = $subdata['name'];
+ ?>  
+  <div class="col-3" style="padding-bottom: 20px;">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title"><?php echo $name ?></h5>
+        <p class="card-text"><?php echo $subdata['usn'] ?></p>
+        <a href="#" class="btn btn-primary">View</a>
       </div>
     </div>
   </div>
-  </div>
+  
   <?php
  }
 ?>
+
+  </div>
   </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   </body>
 </html>
