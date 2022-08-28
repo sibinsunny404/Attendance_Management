@@ -18,7 +18,7 @@ require_once 'database/data_for_home.php';
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
+    <i class='bx bxs-user-circle'></i>
       <div class="logo_name"></div>
       <i class='bx bx-menu' id="btn"></i>
     </div>
@@ -32,24 +32,24 @@ require_once 'database/data_for_home.php';
       </li>
       <li>
         <a href="#">
-        <i class='bx bxs-edit'></i>
+        <i class='bx bx-list-check'></i>
           <span class="links_name">Take Attendance</span>
         </a>
         <span class="tooltip">Attandance</span>
       </li>
       <li>
         <a href="#">
-          <i class='bx bx-chat'></i>
-          <span class="links_name">Messages</span>
+        <i class='bx bxs-user-plus'></i>
+          <span class="links_name">Add Students</span>
         </a>
-        <span class="tooltip">Messages</span>
+        <span class="tooltip">Add Students</span>
       </li>
       <li>
         <a href="#">
-          <i class='bx bx-pie-chart-alt-2'></i>
-          <span class="links_name">Analytics</span>
+        <i class='bx bxs-user-detail'></i>
+          <span class="links_name">View Students</span>
         </a>
-        <span class="tooltip">Analytics</span>
+        <span class="tooltip">View Students</span>
       </li>
       <li>
         <a href="#">
