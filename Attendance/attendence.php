@@ -55,7 +55,7 @@ background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, F
             });
         });
     </script>
- 
+
     <link rel="stylesheet" href="css/loader.css">
     <div class="loader"></div>
     <div style="border:0px;" class="header_fixed">
