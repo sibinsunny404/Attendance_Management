@@ -22,11 +22,14 @@ require_once 'database/data_retrive.php';
     }
 
     h1 {
+      text-transform: uppercase;
+      font-weight: 200;
       text-align: center;
       color:black;
       background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
       display: block;
       border-radius: 10px;
+      text-decoration-style: wavy;
     }
   </style>
 </head>
