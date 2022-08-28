@@ -12,8 +12,10 @@ if (isset($_POST['add'])) {
   $state = $_POST["state"];
   $mbno = $_POST["mbno"];
   $add = $_POST["add"];
-  mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address) 
-        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add')");
+  move_uploaded_file($_FILES["image"]["tmp_name"],"student_image/" . $_FILES["image"]["name"]);			
+$file=$_FILES["image"]["name"];
+  mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
+        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
   header("location:admin_dash.php");
 }
 //  $name=$_POST['uname'];
@@ -70,7 +72,7 @@ if (isset($_POST['add'])) {
   <div class="loader" style="z-index:100;"></div>
   <div style="border:0px;" class="header_fixed">
     <center>
-      <form method="POST">
+      <form method="POST" enctype="multipart/form-data">
         <div class="container" style="padding-top: 125px;">
           <div class="card" style="width: 50rem; border-color:crimson;
    background: #BE93C5;  /* fallback for old browsers */
@@ -124,12 +126,16 @@ border: radius 10%;
                   <label for="mbno" class="form-label">Mobile Number</label>
                   <input type="text" class="form-control" id="mbno" name="mbno" required>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                   <label for="add" class="form-label">Address</label>
                   <input type="text" class="form-control" id="add" placeholder="Enter The full Address" name="add" required>
                 </div>
+                <div class="col-6">
+                  <label for="image" class="form-label">select the photo</label>
+                <input type="file" name="image" id="image" value="">
+                </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="ad()" disabled>ADD</button>
+                  <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="ad()" >ADD</button>
                 </div>
               </div>
             </div>

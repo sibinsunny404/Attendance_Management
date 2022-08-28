@@ -32,6 +32,9 @@ require_once 'sessions.php';
       border-radius: 10px;
       text-decoration-style: wavy;
     }
+    img{
+      float:right; height: 100px;width: 90px;
+    }
   </style>
 </head>
 
@@ -46,18 +49,16 @@ require_once 'sessions.php';
         <div class="col-3" style="padding-bottom: 20px;">
           <div class="card">
             <div class="card-body">
-              <img style=" float:right; height: 50px;width: 50px;" src="assets/images/extra/students.png" alt="">
+            <img src="student_image/<?php echo $subdata['image']; ?>">
               <h5 class="card-title"><?php echo $name ?></h5>
               <p class="card-text"><?php echo $subdata['usn'] ?></p>
               <a href="#" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>
-
       <?php
       }
       ?>
-
     </div>
   </div>
   <!-- Bootstrap JavaScript Libraries -->

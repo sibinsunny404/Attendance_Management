@@ -20,8 +20,7 @@ require_once 'database/connection.php';
 <input type="file" name="image" id="image">
 <input type="submit" name="submit" id="submit" value="upload">
 </form>
-  <!-- <a class="dropdown-item" href="logout.php?logout">Logout</a> --> 
-
+<img src="student_image/<?php echo $row['image_location']; ?>">
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
@@ -31,7 +30,9 @@ require_once 'database/connection.php';
 </html>
 <?php
 if(isset($_POST['submit'])){
-  $file = addslashes(file_get_contents($_FILES["image"]["temp_name"]));
+   
+move_uploaded_file($_FILES["image"]["tmp_name"],"student_image/" . $_FILES["image"]["name"]);			
+$file=$_FILES["image"]["name"];
 mysqli_query($connect, "insert into image (`image`)  values ('$file')");
 }
 ?>
