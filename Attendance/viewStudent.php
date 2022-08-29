@@ -46,14 +46,14 @@ require_once 'sessions.php';
   <?php
   require_once 'loader.html';
   ?>
-  <div class="container">
+  <div class="container-fluid">
     <h1>Student Detials</h1>
-    <div class="row mt-3 form-group">
+    <div class="row  form-group">
       <?php
       while ($subdata = mysqli_fetch_array($viewstures)) {
         $name = $subdata['name'];
       ?>
-        <div class="col-3" style="padding-bottom: 20px;">
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 20px;">
           <div class="card">
             <div class="card-body">
               <img src="student_image/<?php echo $subdata['image']; ?>">
