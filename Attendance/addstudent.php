@@ -71,6 +71,9 @@ $file=$_FILES["image"]["name"];
   <link rel="stylesheet" href="css/loader.css">
   <div class="loader" style="z-index:100;"></div>
   <div style="border:0px;" class="header_fixed">
+  <?php 
+        require_once 'sidebar.php';
+    ?>
     <center>
       <form method="POST" enctype="multipart/form-data">
         <div class="container" style="padding-top: 125px;">
