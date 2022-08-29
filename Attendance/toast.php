@@ -5,8 +5,7 @@
   <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=1024">
   <!-- Bootstrap CSS v5.2.0-beta1 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <link rel="stylesheet" href="css/toast.css">
@@ -16,7 +15,7 @@
 <body style="background-color: white;">
 <div class="notification--wrapper hide" id="openToast">
 	<div class="notification--reminder ptb--20 text-center col-12">
-		<h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id porro. <a class="exit--toast" href="javascript:void(0);">Got it.</a></h3>
+		<h3>Detials Recorded Succeessfully<a class="exit--toast" href="javascript:void(0);">Got it.</a></h3>
 	</div>    
 </div>
 

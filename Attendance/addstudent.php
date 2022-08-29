@@ -1,5 +1,6 @@
 <!-- Add student-->
 <?php
+ require_once 'loader.html';
 require_once 'sessions.php';
 require_once 'database/connection.php';
 if (isset($_POST['add'])) {
@@ -17,6 +18,11 @@ if (isset($_POST['add'])) {
   mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
         values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
   header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
+  
+    if (@$_GET['sucess'] == true) {
+    require_once 'toast.php';
+    }
+    
 }
 //  $name=$_POST['uname'];
 //  echo $name;
@@ -57,9 +63,7 @@ if (isset($_POST['add'])) {
 </head>
 
 <body>
-  <?php
-  require_once 'loader.html';
-  ?>
+ 
 
   <center>
     
@@ -137,20 +141,6 @@ border: radius 10%;
 
   </center>
   </form>
-  <?php
-    if (@$_GET['sucess'] == true) {
-    ?>
-      <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-          <div class="toast-body">
-            Hello, world! This is a toast message.
-          </div>
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-      </div>
-    <?php
-    }
-    ?>
 
 
 
