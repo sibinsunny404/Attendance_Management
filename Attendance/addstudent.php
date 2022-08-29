@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
 $file=$_FILES["image"]["name"];
   mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
         values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
-        header("location:addstudent.php?sucess=Student Added Succeessfully");
+        header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
 }
 //  $name=$_POST['uname'];
 //  echo $name;
