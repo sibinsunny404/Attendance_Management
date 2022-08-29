@@ -56,6 +56,9 @@ mysqli_close($connect);
     <link rel="stylesheet" href="css/loader.css">
     <div class="loader"></div>
     <div style="border:0px;" class="header_fixed">
+    <?php 
+        require_once 'sidebar.php';
+    ?>
         <center>
             <!-- form method -->
             <form method="POST">
