@@ -46,6 +46,7 @@ require_once 'sessions.php';
   <?php
   require_once 'loader.html';
   ?>
+  
   <div class="container-fluid">
     <h1>Student Detials</h1>
     <div class="row  form-group">

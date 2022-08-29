@@ -60,9 +60,7 @@ $file=$_FILES["image"]["name"];
 <?php
     require_once 'loader.html';
   ?>
-  <?php 
-        require_once 'sidebar.php';
-    ?>
+  
     <center>
       <form method="POST" enctype="multipart/form-data">
         <div class="container" style="padding-top: 125px;">
