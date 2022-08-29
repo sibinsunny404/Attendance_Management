@@ -77,7 +77,7 @@ border: radius 10%;
               <?php
 						if (@$_GET['sucess'] == true) {
 						?>
-							<div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-danger text-center my-3"><?php echo $_GET['sucess'] ?></div>
+							<div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-sucess text-center my-3"><?php echo $_GET['sucess'] ?></div>
 						<?php
 						}
 						?>
