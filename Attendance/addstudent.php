@@ -57,20 +57,9 @@ $file=$_FILES["image"]["name"];
 </head>
 
 <body>
-  <script>
-    window.addEventListener("load", () => {
-      const loader = document.querySelector(".loader");
-
-      loader.classList.add("loader--hidden");
-
-      loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-      });
-    });
-  </script>
-  <link rel="stylesheet" href="css/loader.css">
-  <div class="loader" style="z-index:100;"></div>
-  <div style="border:0px;" class="header_fixed">
+<?php
+    require_once 'loader.html';
+  ?>
   <?php 
         require_once 'sidebar.php';
     ?>

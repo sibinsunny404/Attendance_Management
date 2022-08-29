@@ -41,21 +41,9 @@ mysqli_close($connect);
 </head>
 
 <body style="background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);">
-    <script>
-        window.addEventListener("load", () => {
-            const loader = document.querySelector(".loader");
-
-            loader.classList.add("loader--hidden");
-
-            loader.addEventListener("transitionend", () => {
-                document.body.removeChild(loader);
-            });
-        });
-    </script>
-
-    <link rel="stylesheet" href="css/loader.css">
-    <div class="loader"></div>
-    <div style="border:0px;" class="header_fixed">
+<?php
+    require_once 'loader.html';
+  ?>
     <?php 
         require_once 'sidebar.php';
     ?>
