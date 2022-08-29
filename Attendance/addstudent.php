@@ -74,6 +74,13 @@ border: radius 10%;
             <div class="card-body">
 
               <h2 style="font-style:italic;">Enter The Student Detials</h2>
+              <?php
+						if (@$_GET['sucess'] == true) {
+						?>
+							<div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-danger text-center my-3"><?php echo $_GET['sucess'] ?></div>
+						<?php
+						}
+						?>
               <div class="row g-3">
 
                 <div class="col-md-6">
