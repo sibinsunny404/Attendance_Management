@@ -22,6 +22,23 @@ require_once 'database/connection.php';
 </form>
 <img src="student_image/<?php echo $row['image_location']; ?>">
   <!-- Bootstrap JavaScript Libraries -->
+
+
+  <div class="notification--wrapper hide" id="openToast">
+	<div class="notification--reminder ptb--20 text-center col-12">
+		<h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id porro. <a class="exit--toast" href="javascript:void(0);">Got it.</a></h3>
+	</div>    
+</div>
+
+
+<script>
+  window.onload = (event) => {
+    let myAlert = document.querySelectorAll('.toast');
+    let bsAlert = new bootstrap.Toast(myAlert);
+    bsAlert.show();
+}
+</script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
