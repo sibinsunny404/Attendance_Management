@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
 $file=$_FILES["image"]["name"];
   mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
         values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
-  header("location:admin_dash.php");
+        header("location:addstudent.php?sucess=Student Added Succeessfully");
 }
 //  $name=$_POST['uname'];
 //  echo $name;
@@ -40,7 +40,7 @@ $file=$_FILES["image"]["name"];
     }
   </style>
   <script src="jquery-3.6.0.min.js"></script>
-
+<!-- 
   <script>
   $(function(){
   //   $("#name").keyup(function(){
@@ -53,7 +53,7 @@ $file=$_FILES["image"]["name"];
     function ad() {
       alert("student added Successfully")
     }
-  </script>
+  </script> -->
 </head>
 
 <body>
