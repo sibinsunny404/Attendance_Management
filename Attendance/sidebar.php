@@ -18,7 +18,7 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="#">
+        <a href="admin_dash.php">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
