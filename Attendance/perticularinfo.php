@@ -44,6 +44,7 @@ $sviewres = mysqli_query($connect, $sview);
 <body>
 
   <?php
+  require_once 'loader.html';
   while ($subdata = mysqli_fetch_array($sviewres)) {
     $name = $subdata['name'];
     $cls = $subdata['class'];
