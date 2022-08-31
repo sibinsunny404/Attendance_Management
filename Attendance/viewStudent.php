@@ -18,8 +18,13 @@ require_once 'sessions.php';
     }
 
     body {
-      background-color: #8BC6EC;
-      background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+      background: #9CECFB;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     }
 
     h1 {
@@ -46,7 +51,7 @@ require_once 'sessions.php';
   <?php
   require_once 'loader.html';
   ?>
-  
+
   <div class="container-fluid">
     <h1>Student Detials</h1>
     <div class="row  form-group">
@@ -54,17 +59,17 @@ require_once 'sessions.php';
       require_once 'database/data_retrive.php';
       while ($subdata = mysqli_fetch_array($viewstures)) {
         $name = $subdata['name'];
-        $usn=$subdata['usn'];
+        $usn = $subdata['usn'];
       ?>
         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 20px;">
           <div class="card">
             <div class="card-body">
-            <form action="perticularinfo.php" method="POST">
-              <img style="border:solid black 1px; border-radius:45px;" src="student_image/<?php echo $subdata['image']; ?>">
-              <h5 class="card-title"><?php echo $name ?></h5>
-              <p class="card-text" name="name"><?php echo $usn ?></p>
-              <input type="hidden" name="usn" value="<?php echo $usn ?>">
-              <button class="btn btn-primary" type="submit">View</button>
+              <form action="perticularinfo.php" method="POST">
+                <img style="border:solid black 1px; border-radius:45px;" src="student_image/<?php echo $subdata['image']; ?>">
+                <h5 class="card-title"><?php echo $name ?></h5>
+                <p class="card-text" name="name"><?php echo $usn ?></p>
+                <input type="hidden" name="usn" value="<?php echo $usn ?>">
+                <button class="btn btn-primary" type="submit">View</button>
               </form>
             </div>
           </div>
@@ -74,7 +79,7 @@ require_once 'sessions.php';
       ?>
     </div>
   </div>
-  
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
