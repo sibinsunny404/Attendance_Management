@@ -46,6 +46,7 @@ $sviewres = mysqli_query($connect, $sview);
     $cls = $subdata['class'];
     $sem = $subdata['sem'];
     $pic=$subdata['image'];
+    $dob=$subdata['dob("d/m/y")'];
   }
 
   ?>
@@ -62,7 +63,7 @@ $sviewres = mysqli_query($connect, $sview);
         <h5 class="card-text">USN:<?php echo $usn ?></h5>
         <h5 class="card-text">Class:<?php echo $cls ?></h5>
         <h5 class="card-text">Sem:<?php echo $sem ?></h5>
-        <h5 class="card-text">USN:<?php echo $usn ?></h5>
+        <h5 class="card-text">DOB:<?php echo $dob;?></h5>
         
       </div>
     </div>
