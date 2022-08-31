@@ -1,6 +1,6 @@
 <?php
 require_once 'database/connection.php';
-require_once 'database/data_retrive.php';
+require_once 'database/studentview.php';
 ?>
 <!doctype html>
 <html lang="en">
