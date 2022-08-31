@@ -4,7 +4,6 @@ require_once 'database/studentview.php';
 
 
 $usn = $_POST['usn'];
-echo $usn;
 
 $sview = "select * from students where usn='$usn'";
 $sviewres = mysqli_query($connect, $sview);
@@ -16,7 +15,7 @@ $sviewres = mysqli_query($connect, $sview);
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title><?php echo $usn ?></title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,6 +33,7 @@ $sviewres = mysqli_query($connect, $sview);
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     }
+    
   </style>
 
 </head>
@@ -49,21 +49,24 @@ $sviewres = mysqli_query($connect, $sview);
   }
 
   ?>
-  name:=<?php echo $name ?>
-  class:=<?php echo $cls ?>
-  sem:=<?php echo $sem ?>
-
+<center>
 <div class="container">
-  <div class="card mb-3">
-  <!-- <img src="..." class="card-img-top" alt="..."> -->
-  <img style=" text-align:center; border:solid white 1px; border-radius:45px;height:200px;width:200px;"  src="student_image/<?php echo $pic; ?>">
-                
-  <div class="card-body">
-    <h5 class="card-title">Name:<?php echo $name ?></h5>
-    <p class="card-text"></p>
+ <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+    <img style=" text-align:center; border:solid white 1px; border-radius:45px;height:200px;width:200px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Name:<?php echo $name ?></h5>
+        <p class="card-text"></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
   </div>
 </div>
 </div>
+</center>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
