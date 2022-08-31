@@ -1,4 +1,7 @@
-
+<?php
+require_once 'database/connection.php';
+require_once 'database/data_retrive.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
