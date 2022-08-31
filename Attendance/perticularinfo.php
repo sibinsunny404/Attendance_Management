@@ -1,6 +1,17 @@
 <?php
 require_once 'database/connection.php';
 require_once 'database/studentview.php';
+
+
+    $usn=$_POST['usn'];
+    echo $usn;
+
+    require_once 'connection.php';
+    $sview="select * from students where usn=$usn";
+    $sviewres = mysqli_query($connect, $sview);
+
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,8 +33,8 @@ require_once 'database/studentview.php';
 
         ?>
         <?php
-                  while ($subdata = mysqli_fetch_array($subresult)) {
-                    $scount = $subdata['count(*)'];
+                  while ($subdata = mysqli_fetch_array($sviewres)) {
+                    $name=$subdata['']
                   }
                   ?>
         
