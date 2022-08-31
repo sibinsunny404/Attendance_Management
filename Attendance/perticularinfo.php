@@ -58,11 +58,11 @@ $sviewres = mysqli_query($connect, $sview);
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Name:<?php echo $name ?></h5>
-        <p class="card-text">USN:<?php echo $usn ?></p>
-        <p class="card-text">Class:<?php echo $cls ?></p>
-        <p class="card-text">Sem:<?php echo $sem ?></p>
-        <p class="card-text">USN:<?php echo $usn ?></p>
+        <h3 class="card-title"><?php echo $name ?></h3>
+        <h5 class="card-text">USN:<?php echo $usn ?></h5>
+        <h5 class="card-text">Class:<?php echo $cls ?></h5>
+        <h5 class="card-text">Sem:<?php echo $sem ?></h5>
+        <h5 class="card-text">USN:<?php echo $usn ?></h5>
         
       </div>
     </div>
