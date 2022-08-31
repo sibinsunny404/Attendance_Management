@@ -35,6 +35,12 @@ $sviewres = mysqli_query($connect, $sview);
     .card-title,.card-text{
       text-align: left;
     }
+    #card{
+      background: #50C9C3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
     
   </style>
 
@@ -57,14 +63,15 @@ $sviewres = mysqli_query($connect, $sview);
 
   ?>
 <center>
-<div class="container" style="padding-bottom: 30px;">
- <div class="card mb-3" style="max-width: 540px;">
+  <div style="padding-top: 50px;">
+<div class="container" >
+ <div class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;border:solid black 5px;" >
   <div class="row g-0">
-    <div class="col-md-4">
-    <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
+    <div class="col-md-4" >
+    <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;border-radious:50px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
+    <div class="col-md-8" >
+      <div class="card-body" >
         <h3 class="card-title"><?php echo $name ?></h3>
         <h5 class="card-text">USN:<?php echo $usn ?></h5>
         <h5 class="card-text">Class:<?php echo $cls ?></h5>
@@ -74,10 +81,10 @@ $sviewres = mysqli_query($connect, $sview);
         <h5 class="card-text">District:<?php echo $district;?></h5>
         <h5 class="card-text">State:<?php echo $state;?></h5>
         <h5 class="card-text">Address:<?php echo $addres;?></h5>
-        
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 </center>
