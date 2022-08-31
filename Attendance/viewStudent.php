@@ -60,7 +60,7 @@ require_once 'sessions.php';
           <div class="card">
             <div class="card-body">
             <form action="perticularinfo.php" method="POST">
-              <img src="student_image/<?php echo $subdata['image']; ?>">
+              <img style="border:solid black 1px; border-radius:45px;" src="student_image/<?php echo $subdata['image']; ?>">
               <h5 class="card-title"><?php echo $name ?></h5>
               <p class="card-text" name="name"><?php echo $usn ?></p>
               <input type="hidden" name="usn" value="<?php echo $usn ?>">
