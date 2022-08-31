@@ -2,7 +2,7 @@
 require_once 'sessions.php';
 require_once 'database/connection.php';
 require_once 'database/data_retrive.php';
-$date =date("d/m/y");
+$date =date("Y/m/d");
 $query = "SELECT * FROM students";
 $result = mysqli_query($connect, $query);
 //Insert Query Starts From Here
@@ -52,8 +52,10 @@ mysqli_close($connect);
             <!-- form method -->
             <form method="POST">
                 <h1 style="line-height:normal;">Student Attendense</h1>
-                <h3>Date:<?php echo $date; ?></h3><br>
-                <h3>Time:<?php echo date("h:i:sa");?></h3>
+                <h3>Date:<?php echo date("d/m/y"); ?></h3><br>
+                <h3>Time:<?php 
+                date_default_timezone_set("Asia/Calcutta");
+                echo date("h:i:a");?></h3>
                 <!-- select Starts from here -->
                 <h2> <label for="dub" style="line-height:normal;">Choose Sub</label></h2><br>
                 <select name="sub" style="border-radius: 15px;height: 35px;width: 193px; background:transparent;font-weight:900;border: 2px solid blue;text-align:center">
