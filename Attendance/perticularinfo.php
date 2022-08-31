@@ -6,8 +6,7 @@ require_once 'database/studentview.php';
     $usn=$_POST['usn'];
     echo $usn;
 
-    require_once 'connection.php';
-    $sview="select * from students where usn=$usn";
+    $sview="select * from students where usn='$usn'";
     $sviewres = mysqli_query($connect, $sview);
 
 
@@ -33,6 +32,7 @@ require_once 'database/studentview.php';
                     $cls=$subdata['class'];
                     $sem=$subdata['sem'];
                   }
+                  
                   ?>
                   name:=<?php echo $name ?>
                   class:=<?php echo $cls ?>
