@@ -44,6 +44,16 @@ require_once 'sessions.php';
       width: 90px;
       text-align: left;
     }
+
+    #card {
+      background: #abbaab;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #ffffff, #abbaab);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
   </style>
 </head>
 
@@ -63,9 +73,9 @@ require_once 'sessions.php';
       ?>
         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 20px;">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" id="card">
               <form action="perticularinfo.php" method="POST">
-                <img style="border:solid black 1px; border-radius:45px;" src="student_image/<?php echo $subdata['image']; ?>">
+                <img style="border:solid white 1px; border-radius:45px;" src="student_image/<?php echo $subdata['image']; ?>">
                 <h5 class="card-title"><?php echo $name ?></h5>
                 <p class="card-text" name="name"><?php echo $usn ?></p>
                 <input type="hidden" name="usn" value="<?php echo $usn ?>">
