@@ -14,7 +14,7 @@
   <body>
       
         <?php
-                $usn=$_GET['usn'];
+                $usn=$_POST['usn'];
                 echo $usn;
         ?>
         name:=
