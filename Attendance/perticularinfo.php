@@ -31,7 +31,9 @@ $sviewres = mysqli_query($connect, $sview);
       /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #b6fbff, #83a4d4);
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    }
+    .card-title,.card-text{
+      text-align: left;
     }
     
   </style>
@@ -46,7 +48,7 @@ $sviewres = mysqli_query($connect, $sview);
     $cls = $subdata['class'];
     $sem = $subdata['sem'];
     $pic=$subdata['image'];
-    $dob=$subdata['dob("d/m/y")'];
+    $dob=$subdata['dob'];
   }
 
   ?>
