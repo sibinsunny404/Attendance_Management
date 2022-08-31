@@ -49,15 +49,19 @@ $sviewres = mysqli_query($connect, $sview);
     $sem = $subdata['sem'];
     $pic=$subdata['image'];
     $dob=$subdata['dob'];
+    $mbno=$subdata['mbno'];
+    $district=$subdata['district'];
+    $state=$subdata['state'];
+    $addres=$subdata['address'];
   }
 
   ?>
 <center>
-<div class="container">
+<div class="container" style="padding-bottom: 30px;">
  <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-    <img style=" text-align:center; border:solid white 1px; border-radius:45px;height:200px;width:200px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
+    <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -66,6 +70,10 @@ $sviewres = mysqli_query($connect, $sview);
         <h5 class="card-text">Class:<?php echo $cls ?></h5>
         <h5 class="card-text">Sem:<?php echo $sem ?></h5>
         <h5 class="card-text">DOB:<?php echo $dob;?></h5>
+        <h5 class="card-text">PhNo:<?php echo $mbno; ?></h5>
+        <h5 class="card-text">District:<?php echo $district;?></h5>
+        <h5 class="card-text">State:<?php echo $state;?></h5>
+        <h5 class="card-text">Address:<?php echo $addres;?></h5>
         
       </div>
     </div>
