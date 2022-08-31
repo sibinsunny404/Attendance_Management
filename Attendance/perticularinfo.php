@@ -32,16 +32,21 @@ $sviewres = mysqli_query($connect, $sview);
       background: linear-gradient(to right, #b6fbff, #83a4d4);
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
-    .card-title,.card-text{
+
+    .card-title,
+    .card-text {
       text-align: left;
     }
-    #card{
-      background: #50C9C3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    #card {
+      background: #50C9C3;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #96DEDA, #50C9C3);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     }
-    
   </style>
 
 </head>
@@ -53,41 +58,41 @@ background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, F
     $name = $subdata['name'];
     $cls = $subdata['class'];
     $sem = $subdata['sem'];
-    $pic=$subdata['image'];
-    $dob=$subdata['dob'];
-    $mbno=$subdata['mbno'];
-    $district=$subdata['district'];
-    $state=$subdata['state'];
-    $addres=$subdata['address'];
+    $pic = $subdata['image'];
+    $dob = $subdata['dob'];
+    $mbno = $subdata['mbno'];
+    $district = $subdata['district'];
+    $state = $subdata['state'];
+    $addres = $subdata['address'];
   }
 
   ?>
-<center>
-  <div style="padding-top: 50px;">
-<div class="container" >
- <div class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;border:solid black 5px; border-radius:45px;" >
-  <div class="row g-0">
-    <div class="col-md-4" >
-    <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;border-radius:45px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
-    </div>
-    <div class="col-md-8" >
-      <div class="card-body" >
-        <h3 class="card-title"><?php echo $name ?></h3>
-        <h5 class="card-text">USN:<?php echo $usn ?></h5>
-        <h5 class="card-text">Class:<?php echo $cls ?></h5>
-        <h5 class="card-text">Sem:<?php echo $sem ?></h5>
-        <h5 class="card-text">DOB:<?php echo $dob;?></h5>
-        <h5 class="card-text">PhNo:<?php echo $mbno; ?></h5>
-        <h5 class="card-text">District:<?php echo $district;?></h5>
-        <h5 class="card-text">State:<?php echo $state;?></h5>
-        <h5 class="card-text">Address:<?php echo $addres;?></h5>
+  <center>
+    <div style="padding-top: 50px;">
+      <div class="container">
+        <div class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;border:solid black 5px; border-radius:45px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;border-radius:45px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title"><?php echo $name ?></h3>
+                <h5 class="card-text">USN:<?php echo $usn ?></h5>
+                <h5 class="card-text">Class:<?php echo $cls ?></h5>
+                <h5 class="card-text">Sem:<?php echo $sem ?></h5>
+                <h5 class="card-text">DOB:<?php echo $dob; ?></h5>
+                <h5 class="card-text">PhNo:<?php echo $mbno; ?></h5>
+                <h5 class="card-text">District:<?php echo $district; ?></h5>
+                <h5 class="card-text">State:<?php echo $state; ?></h5>
+                <h5 class="card-text">Address:<?php echo $addres; ?></h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
-</div>
-</center>
+  </center>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
