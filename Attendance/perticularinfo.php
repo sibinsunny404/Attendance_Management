@@ -28,15 +28,15 @@ require_once 'database/studentview.php';
   <body>
       
         <?php
-                $usn=$_POST['usn'];
-                echo $usn;
-
-        ?>
-        <?php
                   while ($subdata = mysqli_fetch_array($sviewres)) {
-                    $name=$subdata['']
+                    $name=$subdata['name'];
+                    $cls=$subdata['class'];
+                    $sem=$subdata['sem'];
                   }
                   ?>
+                  name:=<?php echo $name ?>
+                  class:=<?php echo $cls ?>
+                  sem:=<?php echo $sem ?>
         
 
     <!-- Bootstrap JavaScript Libraries -->
