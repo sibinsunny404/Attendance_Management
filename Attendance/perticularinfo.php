@@ -108,7 +108,7 @@ while ($sbjres = mysqli_fetch_array($subres)) {
     <td>Attend</td>
   </tr>
   <tr>
-    
+    <td></td>
   </tr>
 </table>
 
