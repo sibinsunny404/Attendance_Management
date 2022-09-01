@@ -102,16 +102,17 @@ $subres = mysqli_query($connect, $subsel);
 while ($sbjres = mysqli_fetch_array($subres)) {
       $subject=$sbjres['subject'];
   ?>
-<table>
-  <tr>
-    <td>subject</td>
-    <td>Attend</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-</table>
-
+<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 20px;">
+          <div class="card">
+            <div class="card-body" id="card" style="">
+                <h5 class="card-title"><?php echo $subject ?></h5>
+                <p class="card-text"><div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+                </div></p>
+            </div>
+          </div>
+        </div>
   <?php 
 }
   ?>
