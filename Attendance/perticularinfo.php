@@ -39,9 +39,14 @@ $subres = mysqli_query($connect, $subsel);
       text-align: left;
     }
     h2{
-      background-color: aliceblue;
+      text-transform: uppercase;
+      font-weight: 200;
       text-align: center;
+      color: black;
+      background-color: aliceblue;
       display: block;
+      border-radius: 10px;
+      text-decoration-style: wavy;
 
     }
   </style>
