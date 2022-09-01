@@ -86,6 +86,7 @@ $subres = mysqli_query($connect, $subsel);
       </div>
     </div>
 <!-- personal card ends here -->
+<h3>Attandance Status</h3>
 <?php
 while ($sbjres = mysqli_fetch_array($subres)) {
       $subject=$sbjres['subject'];
