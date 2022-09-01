@@ -8,7 +8,7 @@ $usn = $_POST['usn'];
 $sview = "select * from students where usn='$usn'";
 $sviewres = mysqli_query($connect, $sview);
 
-$subsel="SELECT * FROM attendence";
+$subsel="SELECT DISTINCT subject FROM `attendence` WHERE usn='$usn'";
 $subres = mysqli_query($connect, $subsel);
 
 ?>
@@ -86,8 +86,13 @@ $subres = mysqli_query($connect, $subsel);
       </div>
     </div>
 <!-- personal card ends here -->
+<?php
+while ($sbjres = mysqli_fetch_array($subres)) {
+      $subject=$sbjres['subject'];
 
-while ($subdata = mysqli_fetch_array($sviewres)) {
+}
+  ?>
+  sub:=<?php echo $subject ?>
   </center>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
