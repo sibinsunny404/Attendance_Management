@@ -8,8 +8,10 @@ $usn = $_POST['usn'];
 $sview = "select * from students where usn='$usn'";
 $sviewres = mysqli_query($connect, $sview);
 
-$subsel="SELECT DISTINCT subject FROM `attendence` WHERE usn='$usn'";
+$subsel = "SELECT DISTINCT subject FROM `attendence` WHERE usn='$usn'";
 $subres = mysqli_query($connect, $subsel);
+
+
 
 ?>
 <!doctype html>
@@ -38,7 +40,8 @@ $subres = mysqli_query($connect, $subsel);
     .card-text {
       text-align: left;
     }
-    h2{
+
+    h2 {
       text-transform: uppercase;
       font-weight: 200;
       text-align: center;
@@ -47,6 +50,22 @@ $subres = mysqli_query($connect, $subsel);
       display: block;
       border-radius: 10px;
       text-decoration-style: wavy;
+
+    }
+
+    #card {
+      background: #C9D6FF;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    progress{
+      width: 100%;
+      height: 50px;
+      
 
     }
   </style>
@@ -96,26 +115,46 @@ $subres = mysqli_query($connect, $subsel);
         </div>
       </div>
     </div>
-<!-- personal card ends here -->
-<h2>Attandance Status</h2>
-<?php
-while ($sbjres = mysqli_fetch_array($subres)) {
-      $subject=$sbjres['subject'];
-  ?>
-<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 20px;">
-          <div class="card">
-            <div class="card-body" id="card" style="">
-                <h5 class="card-title"><?php echo $subject ?></h5>
-                <p class="card-text"><div class="progress">
-                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
-                </div></p>
+    <!-- personal card ends here -->
+    <h2>Attandance Status</h2>
+    <?php
+    while ($sbjres = mysqli_fetch_array($subres)) {
+      $subject = $sbjres['subject'];
+      $atcal = "SELECT count(*) FROM `attendence` WHERE subject='$subject' AND  usn='$usn'";
+      $atres = mysqli_query($connect, $atcal);
+      while ($attres = mysqli_fetch_array($atres)) {
+        $subcount=$attres['count(*)'];
+        $atcal = "SELECT count(*) FROM `attendence` WHERE subject='$subject' AND  usn='$usn' and attend='present'";
+      $atres = mysqli_query($connect, $atcal);
+      while ($attres = mysqli_fetch_array($atres)) {
+        $present=$attres['count(*)'];
+    ?>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 20px;width:50%">
+        <div class="card">
+          <div class="card-body" id="card">
+            <h5 class="card-title"><?php echo $subject ?></h5>
+            <p class="card-text"><?php 
+             $perdisplay= ($present/$subcount)*100;
+            if($perdisplay==0){
+              echo 'Not Attended For A Class';
+            }else
+            echo round($perdisplay,2).'%'?>
+            <progress value="<?php echo $present ?>" max="<?php echo $subcount ?>"></progress>
             </div>
+            <?php
+              }
+                }
+              ?>
+            </div>
+            </p>
           </div>
         </div>
-  <?php 
-}
-  ?>
+      </div>
+    <?php
+    }
+    ?>
+    
+    </div>
   </center>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
