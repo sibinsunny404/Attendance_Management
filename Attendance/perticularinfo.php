@@ -94,7 +94,9 @@ $subres = mysqli_query($connect, $subsel);
     <!-- personal card starts here -->
     <div style="padding-top: 50px;">
       <div class="container">
-        <div class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;border:solid black 5px; border-radius:45px;">
+      <h3>Student Personal Detials</h3>
+      <div class="shadow-lg p-3 mb-5  rounded " style="width:50%;">
+        <div class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;; border-radius:45px;">
           <div class="row g-0">
             <div class="col-md-4">
               <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;border-radius:45px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
@@ -105,7 +107,7 @@ $subres = mysqli_query($connect, $subsel);
                 <h5 class="card-text">USN:<?php echo $usn ?></h5>
                 <h5 class="card-text">Class:<?php echo $cls ?></h5>
                 <h5 class="card-text">Sem:<?php echo $sem ?></h5>
-                <h5 class="card-text">DOB:<?php echo date($dob("d/m/y")); ?></h5>
+                <h5 class="card-text">DOB:<?php echo $fdate; ?></h5>
                 <h5 class="card-text">PhNo:<?php echo $mbno; ?></h5>
                 <h5 class="card-text">District:<?php echo $district; ?></h5>
                 <h5 class="card-text">State:<?php echo $state; ?></h5>
@@ -114,6 +116,7 @@ $subres = mysqli_query($connect, $subsel);
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
     <!-- personal card ends here -->
