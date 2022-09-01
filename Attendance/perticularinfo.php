@@ -133,7 +133,7 @@ $subres = mysqli_query($connect, $subsel);
       while ($attres = mysqli_fetch_array($atres)) {
         $present=$attres['count(*)'];
     ?>
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 20px;width:50%">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="padding-bottom: 20px;width:50%">
         <div class="card">
           <div class="card-body" id="card">
             <h5 class="card-title"><?php echo $subject ?></h5>
