@@ -103,7 +103,7 @@ while ($sbjres = mysqli_fetch_array($subres)) {
       $subject=$sbjres['subject'];
   ?>
 <div class="table-responsive">
-  <table class="table table-primary" style="max-width :520px;">
+  <table class="table table-primary" style="max-width :620px;">
     <thead>
       <tr>
         <th scope="col">Subject</th>
@@ -113,8 +113,12 @@ while ($sbjres = mysqli_fetch_array($subres)) {
     </thead>
     <tbody>
       <tr class="">
-        <td scope="row"><?php echo $subject ?></td>
-        <td>R1C2</td>
+        <td scope="row"><?php echo $subject; ?></td>
+        <td><div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+        </div>
+      </td>
       </tr>
     </tbody>
   </table>
