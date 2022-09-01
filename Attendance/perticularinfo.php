@@ -95,8 +95,8 @@ $subres = mysqli_query($connect, $subsel);
     <div style="padding-top: 50px;">
       <div class="container">
       <h3>Student Personal Detials</h3>
-      <div class="shadow-lg p-3 mb-5  rounded " style="width:50%;">
-        <div class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;; border-radius:45px;">
+      <!-- <div class="shadow-lg p-3 mb-5  rounded " style="max-width:50%;"> -->
+        <div class="shadow-lg p-3 mb-5  rounded" class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;; border-radius:45px;">
           <div class="row g-0">
             <div class="col-md-4">
               <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;border-radius:45px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
@@ -117,7 +117,7 @@ $subres = mysqli_query($connect, $subsel);
           </div>
         </div>
       </div>
-      </div>
+      <!-- </div> -->
     </div>
     <!-- personal card ends here -->
     <h2>Attandance Status</h2>
