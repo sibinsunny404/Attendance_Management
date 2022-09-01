@@ -90,9 +90,13 @@ $subres = mysqli_query($connect, $subsel);
 while ($sbjres = mysqli_fetch_array($subres)) {
       $subject=$sbjres['subject'];
 
-}
+
   ?>
   sub:=<?php echo $subject ?>
+
+  <?php 
+}
+  ?>
   </center>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
