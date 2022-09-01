@@ -89,10 +89,24 @@ $subres = mysqli_query($connect, $subsel);
 <?php
 while ($sbjres = mysqli_fetch_array($subres)) {
       $subject=$sbjres['subject'];
-
-
   ?>
-  sub:=<?php echo $subject ?>
+<div class="table-responsive">
+  <table class="table table-primary" style="max-width :520px;">
+    <thead>
+      <tr>
+        <th scope="col">Subject</th>
+        <th scope="col">Attendaance</th>
+        <!-- <th scope="col">Column 3</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="">
+        <td scope="row"><?php echo $subject ?></td>
+        <td>R1C2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   <?php 
 }
