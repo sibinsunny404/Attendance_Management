@@ -38,6 +38,10 @@ $subres = mysqli_query($connect, $subsel);
     .card-text {
       text-align: left;
     }
+    h2{
+      background-color: aliceblue;
+      display: block;
+    }
   </style>
 
 </head>
@@ -86,7 +90,7 @@ $subres = mysqli_query($connect, $subsel);
       </div>
     </div>
 <!-- personal card ends here -->
-<h3>Attandance Status</h3>
+<h2>Attandance Status</h2>
 <?php
 while ($sbjres = mysqli_fetch_array($subres)) {
       $subject=$sbjres['subject'];
