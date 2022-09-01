@@ -102,27 +102,15 @@ $subres = mysqli_query($connect, $subsel);
 while ($sbjres = mysqli_fetch_array($subres)) {
       $subject=$sbjres['subject'];
   ?>
-<div class="table-responsive">
-  <table class="table table-primary" style="max-width :620px;">
-    <thead>
-      <tr>
-        <th scope="col">Subject</th>
-        <th scope="col">Attendaance</th>
-        <!-- <th scope="col">Column 3</th> -->
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="">
-        <td scope="row"><?php echo $subject; ?></td>
-        <td><div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
-        </div>
-      </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table>
+  <tr>
+    <td>subject</td>
+    <td>Attend</td>
+  </tr>
+  <tr>
+    
+  </tr>
+</table>
 
   <?php 
 }
