@@ -1,5 +1,5 @@
 <?php
     require_once 'connection.php';
-    $sview="select * from students";
-    $sviewres = mysqli_query($connect, $sview);
+    $subsel="select * from students";
+    $subres = mysqli_query($connect, $subsel);
 ?>
