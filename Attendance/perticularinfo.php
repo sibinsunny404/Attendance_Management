@@ -1,4 +1,5 @@
 <?php
+require_once 'sessions.php';
 require_once 'database/connection.php';
 require_once 'database/studentview.php';
 
@@ -65,6 +66,9 @@ $subres = mysqli_query($connect, $subsel);
     progress{
       width: 100%;
       height: 50px;
+    }
+    h3{
+      text-transform: uppercase;
     }
   </style>
 
