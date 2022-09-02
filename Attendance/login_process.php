@@ -8,6 +8,7 @@ if (isset($_POST['login'])) {
         $query = "select * from admin where admin_uname='" . $_POST['uname'] . "' and passwd='" . $_POST['pass'] . "'";
         $result = mysqli_query($connect, $query);
         if (mysqli_fetch_assoc($result)) {
+            // session create
             $_SESSION['user'] = $_POST['uname'];
             // sessin start time
             $_SESSION['start'] = time();
