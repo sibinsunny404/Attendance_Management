@@ -65,8 +65,6 @@ $subres = mysqli_query($connect, $subsel);
     progress{
       width: 100%;
       height: 50px;
-      
-
     }
   </style>
 
@@ -94,7 +92,7 @@ $subres = mysqli_query($connect, $subsel);
     <!-- personal card starts here -->
     <div style="padding-top: 50px;">
       <div class="container">
-      <h3>Student Personal Detials</h3>
+      <h3><kbd> Personal Detials</kbd></h3>
       <!-- <div class="shadow-lg p-3 mb-5  rounded " style="max-width:50%;"> -->
         <div class="shadow-lg p-3 mb-5  rounded" class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent; border:solid black 1px; border-radius:45px;">
           <div class="row g-0">
@@ -103,7 +101,7 @@ $subres = mysqli_query($connect, $subsel);
             </div>
             <div class="col-md-8">
               <div class="card-body" style="padding-left: 20px;">
-                <h3 class="card-title"><kbd><?php echo $name ?></kbd></h3>
+                <h3 class="card-title"><?php echo $name ?></h3>
                 <h5 class="card-text"><code>USN:</code><?php echo $usn ?></h5>
                 <h5 class="card-text"><code>Class:</code><?php echo $cls ?></h5>
                 <h5 class="card-text"><code>Sem:</code><?php echo $sem ?></h5>
