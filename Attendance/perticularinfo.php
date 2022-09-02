@@ -146,10 +146,13 @@ $subres = mysqli_query($connect, $subsel);
     ?>
             <h5 class="card-title"><?php echo $subject ?></h5>
             <?php if($perdisplay<75){
-              echo '<h5 style="color:red;padding: -10px;" class="msg">Attendance Shortage</h5>';
+              echo '<h5 style="color:red;padding: -10px;" class="msg">Attendance Shortage🙁</h5>';
+            }
+            elseif($perdisplay<100){
+              echo '<h5 style="color:green;"class="msg">Attendance Are Clear😊</h5>';
             }
             else{
-              echo '<h5 style="color:green;"class="msg">Attendance Are Cleared </h5>';
+              echo '<h5 style="color:green;"class="msg">h=Full Attendance🤩</h5>';
             } ?>
             <p class="card-text"><?php 
              
