@@ -1,6 +1,6 @@
 <?php
-require_once 'database/data_retrive.php';
 require_once 'sessions.php';
+require_once 'database/data_retrive.php';
 ?>
 <!doctype html>
 <html lang="en">
