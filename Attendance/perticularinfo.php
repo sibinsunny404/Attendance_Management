@@ -96,22 +96,22 @@ $subres = mysqli_query($connect, $subsel);
       <div class="container">
       <h3>Student Personal Detials</h3>
       <!-- <div class="shadow-lg p-3 mb-5  rounded " style="max-width:50%;"> -->
-        <div class="shadow-lg p-3 mb-5  rounded" class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent;; border-radius:45px;">
+        <div class="shadow-lg p-3 mb-5  rounded" class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent; border:solid black 1px; border-radius:45px;">
           <div class="row g-0">
             <div class="col-md-4">
               <img style="padding: 20px; text-align:center; border:solid white 1px;height:200px;width:200px;border-radius:45px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
             </div>
             <div class="col-md-8">
-              <div class="card-body">
-                <h3 class="card-title"><?php echo $name ?></h3>
-                <h5 class="card-text">USN:<?php echo $usn ?></h5>
-                <h5 class="card-text">Class:<?php echo $cls ?></h5>
-                <h5 class="card-text">Sem:<?php echo $sem ?></h5>
-                <h5 class="card-text">DOB:<?php echo $fdate; ?></h5>
-                <h5 class="card-text">PhNo:<?php echo $mbno; ?></h5>
-                <h5 class="card-text">District:<?php echo $district; ?></h5>
-                <h5 class="card-text">State:<?php echo $state; ?></h5>
-                <h5 class="card-text">Address:<?php echo $addres; ?></h5>
+              <div class="card-body" style="padding-left: 20px;">
+                <h3 class="card-title"><kbd><?php echo $name ?></kbd></h3>
+                <h5 class="card-text"><code>USN:</code><?php echo $usn ?></h5>
+                <h5 class="card-text"><code>Class:</code><?php echo $cls ?></h5>
+                <h5 class="card-text"><code>Sem:</code><?php echo $sem ?></h5>
+                <h5 class="card-text"><code>DOB:</code><?php echo $fdate; ?></h5>
+                <h5 class="card-text"><code>PhNo:</code><?php echo $mbno; ?></h5>
+                <h5 class="card-text"><code>District:</code><?php echo $district; ?></h5>
+                <h5 class="card-text"><code>State:</code><?php echo $state; ?></h5>
+                <h5 class="card-text"><code>Address:</code><?php echo $addres; ?></h5>
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ $subres = mysqli_query($connect, $subsel);
     }
   }
     else {
-      echo "<h2 style='color:red; background-color:black;padding:20px;'>None Of The Class Attended By This Student </h2>";
+      echo "<h2 style='color:red; background-color:black;padding:20px;'>None Of The Class Attended By Student </h2>";
     }
     ?>
     
