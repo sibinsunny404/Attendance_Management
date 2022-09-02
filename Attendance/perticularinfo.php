@@ -141,7 +141,7 @@ $subres = mysqli_query($connect, $subsel);
             <p class="card-text"><?php 
              $perdisplay= ($present/$subcount)*100;
             if($perdisplay==0){
-              echo 'Not Attended For A Class';
+              echo '<p style="color:red;">Not Attended For A Class</p>';
             }else
             echo round($perdisplay,2).'%'?>
             <progress value="<?php echo $present ?>" max="<?php echo $subcount ?>"></progress>
@@ -159,7 +159,7 @@ $subres = mysqli_query($connect, $subsel);
     }
   }
     else {
-      echo "no Class Are attended";
+      echo "<h2 style='color:red; background-color:black;padding:20px;'>None Of The Class Attended By This Student </h2>";
     }
     ?>
     
