@@ -122,6 +122,7 @@ $subres = mysqli_query($connect, $subsel);
     <!-- personal card ends here -->
     <h2>Attandance Status</h2>
     <?php
+     if (mysqli_num_rows($subres) > 0) {
     while ($sbjres = mysqli_fetch_array($subres)) {
       $subject = $sbjres['subject'];
       $atcal = "SELECT count(*) FROM `attendence` WHERE subject='$subject' AND  usn='$usn'";
@@ -155,6 +156,10 @@ $subres = mysqli_query($connect, $subsel);
         </div>
       </div>
     <?php
+    }
+  }
+    else {
+      echo "no Class Are attended";
     }
     ?>
     
