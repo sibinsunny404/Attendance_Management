@@ -65,10 +65,14 @@ $subres = mysqli_query($connect, $subsel);
     }
     progress{
       width: 100%;
-      height: 50px;
+      height: 30px;
     }
     h3{
       text-transform: uppercase;
+    }
+    .msg{
+      background-color:beige;
+      display:inline-block;
     }
   </style>
 
@@ -122,7 +126,10 @@ $subres = mysqli_query($connect, $subsel);
       <!-- </div> -->
     </div>
     <!-- personal card ends here -->
-    <h2>Attandance Status</h2>
+    <h2>Attendance Status</h2>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="padding-bottom: 20px;width:50%">
+        <div class="card">
+          <div class="card-body" id="card">
     <?php
      if (mysqli_num_rows($subres) > 0) {
     while ($sbjres = mysqli_fetch_array($subres)) {
@@ -135,28 +142,33 @@ $subres = mysqli_query($connect, $subsel);
       $atres = mysqli_query($connect, $atcal);
       while ($attres = mysqli_fetch_array($atres)) {
         $present=$attres['count(*)'];
+        $perdisplay= ($present/$subcount)*100;
     ?>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="padding-bottom: 20px;width:50%">
-        <div class="card">
-          <div class="card-body" id="card">
             <h5 class="card-title"><?php echo $subject ?></h5>
+            <?php if($perdisplay<75){
+              echo '<h5 style="color:red;padding: -10px;" class="msg">Attendance Shortage</h5>';
+            }
+            else{
+              echo '<h5 style="color:green;"class="msg">Attendance Are Cleared </h5>';
+            } ?>
             <p class="card-text"><?php 
-             $perdisplay= ($present/$subcount)*100;
+             
+             
             if($perdisplay==0){
               echo '<p style="color:red;">Not Attended For A Class</p>';
-            }else
-            echo round($perdisplay,2).'%'?>
+            }else{
+            echo round($perdisplay,2).'%';}
+            
+            ?>
             <progress value="<?php echo $present ?>" max="<?php echo $subcount ?>"></progress>
-            </div>
+            
             <?php
               }
                 }
               ?>
-            </div>
+            
             </p>
-          </div>
-        </div>
-      </div>
+          
     <?php
     }
   }
@@ -164,7 +176,9 @@ $subres = mysqli_query($connect, $subsel);
       echo "<h2 style='color:red; background-color:black;padding:20px;'>None Of The Class Attended By Student </h2>";
     }
     ?>
-    
+    </div>
+        </div>
+      </div>
     </div>
   </center>
   <!-- Bootstrap JavaScript Libraries -->
