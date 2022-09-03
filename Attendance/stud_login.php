@@ -31,7 +31,7 @@
 </head>
 
 <body>
-	<form method="POST" action="login_process.php">
+	<form method="POST" action="stud_loignprocess.php">
 		<div class="limiter">
 			<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 				<div class="wrap-login100">
