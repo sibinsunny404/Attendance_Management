@@ -154,7 +154,7 @@ $subres = mysqli_query($connect, $subsel);
                     } elseif ($perdisplay < 100) {
                       echo '<h5 style="color:green;"class="msg">Attendance Are Clear😊</h5>';
                     } else {
-                      echo '<h5 style="color:green;"class="msg">h=Full Attendance🤩</h5>';
+                      echo '<h5 style="color:green;"class="msg">Full Attendance🤩</h5>';
                     } ?>
                     <p class="card-text"><?php
 
