@@ -19,8 +19,12 @@
     $fetch="select password from students";
     $fresult=mysqli_query($connect,$fetch);
     while ($subdata = mysqli_fetch_array($fresult)) {
-      $password=md5($subdata('password'));
-    $query($connect,"update students set password=$password");
+      $pass=$subdata('password');
+      foreach ($pass as $ids => $attend) {
+        $password=md5($pass)[$ids];
+    $query($connect,"insert into students(password) values('$pass')");
+    header("location:sample.php??succ=sucess");
+      }
     }
   ?>
 
