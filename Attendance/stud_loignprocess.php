@@ -4,7 +4,7 @@ require_once 'database/connection.php';
 
 if (isset($_POST['login'])) {
     if (empty($_POST['uname']) || empty($_POST['pass'])) {
-        header("location:index.php?Empty=PLEASE FILL THE FEILDS");
+        header("location:studentdetilas.php?Empty=PLEASE FILL THE FEILDS");
     } else {
         $hpass=md5($_POST['pass']);
         $query = "select * from students where usn='" . $_POST['uname'] . "' and password='" . $hpass . "'";
