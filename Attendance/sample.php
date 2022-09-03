@@ -14,27 +14,14 @@
 </head>
 
 <body style="background-color: white;">
-<div class="notification--wrapper hide" id="openToast">
-	<div class="notification--reminder ptb--20 text-center col-12">
-		<h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id porro. <a class="exit--toast" href="javascript:void(0);">Got it.</a></h3>
-	</div>    
-</div>
+  <?php 
+    require_once 'database/connection.php';
+    $fetch="select password from students";
+    $fresult
+    while ($subdata = mysqli_fetch_array($sviewres)) {
 
-<script>
- $(document).ready(function() {
-  $("#openToast").toggleClass("hide view");
-  
-  $('a.exit--toast').click(function() {
-      $("#openToast").fadeOut(1000, 0);
-  });
-
-  $(document).on('click', function (e) {
-    if ($(e.target).closest(".notification--reminder").length === 0) {
-        $("#openToast").fadeOut(1000, 0);
-    }
-});
-});
-</script>
+    $query("update students set password=$password")
+  ?>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 

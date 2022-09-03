@@ -1,12 +1,16 @@
 <?php
 session_start();
 require_once 'database/connection.php';
+
 if (isset($_POST['login'])) {
     if (empty($_POST['uname']) || empty($_POST['pass'])) {
         header("location:index.php?Empty=PLEASE FILL THE FEILDS");
     } else {
-        $query = "select * from admin where admin_uname='" . $_POST['uname'] . "' and passwd='" . $_POST['pass'] . "'";
+        $hpass=md5($_POST['pass']);
+        $query = "select * from admin where admin_uname='" . $_POST['uname'] . "' and passwd='" . $hpass . "'";
         $result = mysqli_query($connect, $query);
+        
+            // if(password_verify($pass,$hpass)){
         if (mysqli_fetch_assoc($result)) {
             // session create
             $_SESSION['user'] = $_POST['uname'];
@@ -19,6 +23,9 @@ if (isset($_POST['login'])) {
             header("location:index.php?invalid=Enter The Valid Credentials");
         }
     }
-} else {
+    
+    }
+// }
+ else {
     header("location:index.php");
 }
