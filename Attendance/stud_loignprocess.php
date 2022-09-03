@@ -7,7 +7,8 @@ if (isset($_POST['login'])) {
         header("location:studentdetilas.php?Empty=PLEASE FILL THE FEILDS");
     } else {
         $hpass=md5($_POST['pass']);
-        $query = "select * from students where usn='" . $_POST['uname'] . "' and password='" . $hpass . "'";
+        $uname=strip_tags($_POST['uname']);
+        $query = "select * from students where usn='" . $uname . "' and password='" . $hpass . "'";
         $result = mysqli_query($connect, $query);
         
             // if(password_verify($pass,$hpass)){
