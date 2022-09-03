@@ -7,7 +7,9 @@ if (isset($_POST['login'])) {
         header("location:index.php?Empty=PLEASE FILL THE FEILDS");
     } else {
         $hpass=md5($_POST['pass']);
-        $query = "select * from admin where admin_uname='" . $_POST['uname'] . "' and passwd='" . $hpass . "'";
+        $sname=$_POST['uname'];
+        $uname=preg_replace("/[^a-zA-z0-9]/","",$sname);
+        $query = "select * from admin where admin_uname='" . $uname . "' and passwd='" . $hpass . "'";
         $result = mysqli_query($connect, $query);
         
             // if(password_verify($pass,$hpass)){
