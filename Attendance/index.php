@@ -85,10 +85,9 @@
 							</button>
 						</div>
 
-						<div class="text-center p-t-90">
-							<a class="txt1" href="#">
-								Student Login->
-							</a>
+						<div class="text-center p-t-30">
+							<h4>Student?</h4>
+							<button style="border:1px;border-radius:10px;width:150px;" type="button" class="btn btn-">Button</button>
 						</div>
 					</form>
 				</div>
