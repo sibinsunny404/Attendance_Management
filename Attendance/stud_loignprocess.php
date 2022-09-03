@@ -7,7 +7,8 @@ if (isset($_POST['login'])) {
         header("location:studentdetilas.php?Empty=PLEASE FILL THE FEILDS");
     } else {
         $hpass=md5($_POST['pass']);
-        $uname=strip_tags($_POST['uname']);
+        $sname=$_POST['uname'];
+        $uname=preg_replace("/[^a-zA-z0-9]/","",$sname);
         $query = "select * from students where usn='" . $uname . "' and password='" . $hpass . "'";
         $result = mysqli_query($connect, $query);
         

@@ -15,17 +15,10 @@
 
 <body style="background-color: white;">
   <?php 
-    require_once 'database/connection.php';
-    $fetch="select password from students";
-    $fresult=mysqli_query($connect,$fetch);
-    while ($subdata = mysqli_fetch_array($fresult)) {
-      $pass=$subdata('password');
-      foreach ($pass as $ids => $attend) {
-        $password=md5($pass)[$ids];
-    $query($connect,"insert into students(password) values('$pass')");
-    header("location:sample.php??succ=sucess");
-      }
-    }
+   
+   $hac='@#$%abcd&^**';
+   $fil=preg_replace("/[^a-zA-z0-9]/","",$hac);
+    echo $fil;
   ?>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
