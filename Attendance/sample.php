@@ -17,10 +17,11 @@
   <?php 
     require_once 'database/connection.php';
     $fetch="select password from students";
-    $fresult
-    while ($subdata = mysqli_fetch_array($sviewres)) {
-
-    $query("update students set password=$password")
+    $fresult=mysqli_query($connect,$fetch);
+    while ($subdata = mysqli_fetch_array($fresult)) {
+      $password=md5($subdata('password'));
+    $query("update students set password=$password");
+    }
   ?>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
