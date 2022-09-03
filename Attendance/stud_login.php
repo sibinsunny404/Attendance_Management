@@ -27,7 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<!--===============================================================================================-->
-	<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
 </head>
 
 <body>
@@ -37,10 +37,10 @@
 				<div class="wrap-login100">
 					<form class="login100-form validate-form">
 						<span class="login100-form-logo">
-						<i class='bx bxs-user'></i>
+							<i class="zmdi zmdi-landscape"></i>
 						</span>
 						<span class="login100-form-title p-b-34 p-t-27">
-							Admin Log in
+							Student Log in
 						</span>
 						<?php
 						if (@$_GET['Empty'] == true) {
@@ -86,8 +86,8 @@
 						</div>
 
 						<div class="text-center p-t-30">
-							<h5 style="color:aliceblue;">Student?</h5>
-							<button style="border:1px;border-radius:20px;width:150px;height: 45px;" type="button" class="btn btn-info" ><a href="stud_login.php">Login Here</a></button>
+							<h5 style="color:aliceblue;">Admin?</h5>
+							<button style="border:1px;border-radius:20px;width:150px;height: 45px;" type="button" class="btn btn-info" ><a href="index.php">Login Here</a></button>
 						</div>
 					</form>
 				</div>
