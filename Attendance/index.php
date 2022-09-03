@@ -27,7 +27,6 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<!--===============================================================================================-->
-	<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 
 <body>
@@ -37,7 +36,7 @@
 				<div class="wrap-login100">
 					<form class="login100-form validate-form">
 						<span class="login100-form-logo">
-						<i class='bx bxs-user'></i>
+						<i class="zmdi zmdi-account zmdi-hc-1x"></i>
 						</span>
 						<span class="login100-form-title p-b-34 p-t-27">
 							Admin Log in
