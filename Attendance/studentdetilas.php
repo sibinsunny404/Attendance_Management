@@ -82,7 +82,7 @@ $subres = mysqli_query($connect, $subsel);
 </head>
 
 <body>
-<div><a href="logout.php"><img src="assets/images/users/logout.png" alt=""></a></div>
+<div style="text-align:center;"><a style="color:red;font-size:large;font-weight:400;" href="logout.php?logout"><img style="height:30px;width:30px;" src="assets/images/users/logout.png" alt="">LogOut</a></div>
   <?php
   require_once 'loader.html';
   while ($subdata = mysqli_fetch_array($sviewres)) {
