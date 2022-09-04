@@ -16,8 +16,9 @@ if (isset($_POST['add'])) {
   $password = md5($usn);
   move_uploaded_file($_FILES["image"]["tmp_name"], "student_image/" . $_FILES["image"]["name"]);
   $file = $_FILES["image"]["name"];
-  mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,password,image) 
-        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$password','$file')");
+  mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
+        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
+        mysqli_query($connect,"insert into login ")
   header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
 }
 ?>

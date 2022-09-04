@@ -80,7 +80,7 @@ $subres = mysqli_query($connect, $subsel);
   </style>
 
 </head>
-
+ 
 <body>
 <div style="text-align:center;"><a style="color:red;font-size:large;font-weight:400;" href="logout.php?logout"><img style="height:30px;width:30px;" src="assets/images/users/logout.png" alt="">LogOut</a></div>
   <?php
