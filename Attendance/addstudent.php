@@ -89,7 +89,7 @@ border: radius 10%;
             <?php
             if (@$_GET['sucess'] == true) {
               ?>
-                <div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-success text-center my-3"><?php echo $_GET['sucess'] ?></div>
+                <div class="col-md-6" style="background-color:#EFEEE5; border-radius: 10px;color:#274546;font-weight:500;" class=" text-backgro text-success text-center my-3"><?php echo $_GET['sucess'] ?></div>
               <?php
               }
               ?>

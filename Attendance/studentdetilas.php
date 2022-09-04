@@ -1,5 +1,5 @@
 <?php
-require_once 'sessions.php';
+require_once 'student_session.php';
 require_once 'database/connection.php';
 require_once 'database/studentview.php';
 

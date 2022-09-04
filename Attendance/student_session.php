@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['student'])) {
 } else {
 	header("location:index.php");
 }
@@ -12,5 +12,3 @@ if ($now > $_SESSION['expire']) {
 } else {
 	// nothing planned
 }
-
-
