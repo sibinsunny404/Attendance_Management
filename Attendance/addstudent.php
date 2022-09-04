@@ -26,6 +26,9 @@ if (isset($_POST['add'])) {
 }
 //  $name=$_POST['uname'];
 //  echo $name;
+
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -72,21 +75,7 @@ body {
   padding: 20px;
 }
   </style>
-  <script src="jquery-3.6.0.min.js"></script>
-  <!-- 
-  <script>
-  $(function(){
-  //   $("#name").keyup(function(){
-  $('#add').keyup(function(){
-      $("#submit").removeAttr('disabled');
-    });
-        });
-  </script>
-  <script>
-    function ad() {
-      alert("student added Successfully")
-    }
-  </script> -->
+
 </head>
 
 <body>
@@ -116,6 +105,7 @@ border: radius 10%;
               <div class="col-md-6">
                 <label for="usn" class="form-label">USN</label>
                 <input type="text" class="form-control" id="usn" name="usn" required>
+                <span id="avl"></span>
               </div>
               <div class="col-md-4">
                 <label for="class" class="form-label">CLASS</label>
@@ -177,5 +167,24 @@ border: radius 10%;
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
+
+<script src="jQuery/jquery-3.6.0.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+     $("#usn").blur(function(){
+       var susn=$(this).val();
+       $.ajax({
+         url:"verify.php",
+         method:"POST",
+         data:{usn:susn},
+         dataType:"text",
+         success:function(html){
+           $('#avl').html(html);
+         }
+       })
+     })
+    })
+   </script>
 
 </html>
