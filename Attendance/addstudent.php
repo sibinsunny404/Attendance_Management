@@ -1,6 +1,6 @@
 <!-- Add student-->
 <?php
- require_once 'loader.html';
+require_once 'loader.html';
 require_once 'sessions.php';
 require_once 'database/connection.php';
 if (isset($_POST['add'])) {
@@ -13,16 +13,16 @@ if (isset($_POST['add'])) {
   $state = $_POST["state"];
   $mbno = $_POST["mbno"];
   $add = $_POST["add"];
+  $password = md5($usn);
   move_uploaded_file($_FILES["image"]["tmp_name"], "student_image/" . $_FILES["image"]["name"]);
   $file = $_FILES["image"]["name"];
-  mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
-        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
+  mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,password,image) 
+        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$password','$file')");
   header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
-  
-    if (@$_GET['sucess'] == true) {
+
+  if (@$_GET['sucess'] == true) {
     require_once 'toast.php';
-    }
-    
+  }
 }
 //  $name=$_POST['uname'];
 //  echo $name;
@@ -44,6 +44,33 @@ if (isset($_POST['add'])) {
       background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 
     }
+    [type="file"] {
+/* Style the color of the message that says 'No file chosen' */
+  color:black;
+}
+[type="file"]::-webkit-file-upload-button {
+  background:aqua;
+  border: 2px solid blanchedalmond;
+  border-radius: 10px;
+  color:black;
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+
+[type="file"]::-webkit-file-upload-button:hover {
+  background: #fff;
+  border: 2px solid #535353;
+  color: #000;
+}
+
+/* GENERAL STYLING OF PAGE — NOT APPLICABLE TO EXAMPLE */
+body {
+  padding: 20px;
+}
   </style>
   <script src="jquery-3.6.0.min.js"></script>
   <!-- 
@@ -63,10 +90,10 @@ if (isset($_POST['add'])) {
 </head>
 
 <body>
- 
+
 
   <center>
-    
+
     <form method="POST" enctype="multipart/form-data">
       <div class="container" style="padding-top: 125px;">
         <div class="card" style="width: 50rem; border-color:crimson;
@@ -127,8 +154,8 @@ border: radius 10%;
                 <input type="text" class="form-control" id="add" placeholder="Enter The full Address" name="add" required>
               </div>
               <div class="col-6">
-                <label for="image" class="form-label">select the photo</label>
-                <input type="file" name="image" id="image" value="">
+                <label for="image" class="form-label">Student Image</label>
+                <input type="file" name="image" id="image" value="" accept="image/x-png,image/gif,image/jpeg" required>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="ad()">ADD</button>
