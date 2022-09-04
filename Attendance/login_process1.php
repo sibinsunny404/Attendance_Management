@@ -9,31 +9,25 @@ if (isset($_POST['login'])) {
         $hpass=md5($_POST['pass']);
         $sname=$_POST['uname'];
         $uname=preg_replace("/[^a-zA-z0-9]/","",$sname);
-        $query = "select * from users where username='" . $uname . "' and password='" . $hpass . "'";
+        $query = "select * from users where admin_uname='" . $uname . "' and passwd='" . $hpass . "'";
         $result = mysqli_query($connect, $query);
-        $row=mysqli_fetch_array($result);
-        if($row['auth_type']=='admin'){
-             // session create
-            $_SESSION['user'] = $_POST['uname'];
-            header("location:admin_dash.php");
-        }
-        elseif($row['auth_type']=='student'){
+        
+            // if(password_verify($pass,$hpass)){
+        if (mysqli_fetch_assoc($result)) {
             // session create
-            $_SESSION['student'] = $_POST['uname'];
-            header("location:studentdetilas.php");
-       }
-            
-        else {
+            $_SESSION['user'] = $_POST['uname'];
+            // sessin start time
+            $_SESSION['start'] = time();
+            // tacking session start time
+            $_SESSION['expire'] = $_SESSION['start'] + (1 * 60);
+            header("location:admin_dash.php");
+        } else {
             header("location:index.php?invalid=Enter The Valid Credentials");
         }
     }
     
-}
-else {
+    }
+// }
+ else {
     header("location:index.php");
 }
-// sessin start time
-$_SESSION['start'] = time();
-// tacking session start time
-$_SESSION['expire'] = $_SESSION['start'] + (1 * 60);
-// }

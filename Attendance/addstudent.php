@@ -14,11 +14,12 @@ if (isset($_POST['add'])) {
   $mbno = $_POST["mbno"];
   $add = $_POST["add"];
   $password = md5($usn);
+  $auth="student";
   move_uploaded_file($_FILES["image"]["tmp_name"], "student_image/" . $_FILES["image"]["name"]);
   $file = $_FILES["image"]["name"];
   mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
         values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
-        mysqli_query($connect,"insert into login ")
+        mysqli_query($connect,"insert into users (`username`, `password`, `auth_type`) values('$usn','$password','$auth')");
   header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
 }
 ?>

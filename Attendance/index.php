@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Login V3</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -39,7 +39,7 @@
 						<i class="zmdi zmdi-account zmdi-hc-1x"></i>
 						</span>
 						<span class="login100-form-title p-b-34 p-t-27">
-							Admin Log in
+							Log in
 						</span>
 						<?php
 						if (@$_GET['Empty'] == true) {
@@ -83,11 +83,9 @@
 								Login
 							</button>
 						</div>
-
-						<div class="text-center p-t-30">
-							<h5 style="color:aliceblue;">Student?</h5>
-							<button style="border:1px;border-radius:20px;width:150px;height: 45px;" type="button" class="btn btn-info" ><a href="stud_login.php">Login Here</a></button>
-						</div>
+						<div class="text-center p-t-80">
+							<!-- <h5 style="color:aliceblue;">Admin?</h5> -->
+							</div>
 					</form>
 				</div>
 			</div>
