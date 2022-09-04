@@ -19,12 +19,6 @@ if (isset($_POST['add'])) {
   mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,password,image) 
         values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$password','$file')");
   header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
-
-  if (@$_GET['sucess'] == true) {
-    ?>
-    <div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-danger text-center my-3"><?php echo $_GET['sucess'] ?></div>
-    <?php
-  }
 }
 ?>
 <!doctype html>
@@ -90,6 +84,13 @@ border: radius 10%;
 ">
 
           <div class="card-body">
+            <?php
+            if (@$_GET['sucess'] == true) {
+              ?>
+                <div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-success text-center my-3"><?php echo $_GET['sucess'] ?></div>
+              <?php
+              }
+              ?>
             <h2 style="font-style:italic;">Enter The Student Detials</h2>
 
             <div class="row g-3">
