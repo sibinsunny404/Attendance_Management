@@ -21,14 +21,11 @@ if (isset($_POST['add'])) {
   header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
 
   if (@$_GET['sucess'] == true) {
-    require_once 'toast.php';
+    ?>
+    <div style="background-color:white;  border-radius: 10px;" class=" text-backgro text-danger text-center my-3"><?php echo $_GET['sucess'] ?></div>
+    <?php
   }
 }
-//  $name=$_POST['uname'];
-//  echo $name;
-
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -93,7 +90,6 @@ border: radius 10%;
 ">
 
           <div class="card-body">
-
             <h2 style="font-style:italic;">Enter The Student Detials</h2>
 
             <div class="row g-3">
