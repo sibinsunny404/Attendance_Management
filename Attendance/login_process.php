@@ -35,5 +35,5 @@ else {
 // sessin start time
 $_SESSION['start'] = time();
 // tacking session start time
-$_SESSION['expire'] = $_SESSION['start'] + (1 * 60);
+$_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
 // }
