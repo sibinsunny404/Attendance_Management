@@ -169,7 +169,6 @@ border: radius 10%;
 </body>
 
 <script src="jQuery/jquery-3.6.0.min.js"></script>
-  
   <script>
     $(document).ready(function(){
      $("#usn").blur(function(){
