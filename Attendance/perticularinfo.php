@@ -162,7 +162,7 @@ $subres = mysqli_query($connect, $subsel);
                                           if ($perdisplay == 0) {
                                             echo '<p style="color:red;">Not Attended For A Class</p>';
                                           } else {
-                                            echo round($perdisplay, 2) . '%';
+                                            echo "<b>".round($perdisplay, 2) ."%</b>";
                                           }
 
                                           ?>
