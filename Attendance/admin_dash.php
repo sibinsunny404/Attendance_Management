@@ -31,7 +31,7 @@ require_once 'database/data_for_home.php';
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
-        <span class="tooltip">Dashboard</span>
+        <span class="tooltip">ashboard</span>
       </li>
       <li>
         <a href="attendence.php">
