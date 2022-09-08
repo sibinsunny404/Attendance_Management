@@ -18,13 +18,10 @@ require_once 'database/data_retrive.php';
     }
 
     body {
-      background: #9CECFB;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      background-color: #CCACA1;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 1200'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(0,768,361)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ebebeb'/%3E%3Cstop offset='0.02' stop-color='%23CCACA1'/%3E%3Cstop offset='0.02' stop-color='%23c7c2c0'/%3E%3Cstop offset='0.032' stop-color='%23CCACA1'/%3E%3Cstop offset='0.032' stop-color='%23d9c3bc'/%3E%3Cstop offset='0.056' stop-color='%23CCACA1'/%3E%3Cstop offset='0.056' stop-color='%23bea8a1'/%3E%3Cstop offset='0.07' stop-color='%23CCACA1'/%3E%3Cstop offset='0.07' stop-color='%23544d4a'/%3E%3Cstop offset='0.1' stop-color='%23CCACA1'/%3E%3Cstop offset='0.1' stop-color='%23cec8c7'/%3E%3Cstop offset='0.126' stop-color='%23CCACA1'/%3E%3Cstop offset='0.126' stop-color='%23b2968d'/%3E%3Cstop offset='0.142' stop-color='%23CCACA1'/%3E%3Cstop offset='0.142' stop-color='%23b19a93'/%3E%3Cstop offset='0.159' stop-color='%23CCACA1'/%3E%3Cstop offset='0.159' stop-color='%23c7b7b1'/%3E%3Cstop offset='0.17' stop-color='%23CCACA1'/%3E%3Cstop offset='0.17' stop-color='%23817875'/%3E%3Cstop offset='0.197' stop-color='%23CCACA1'/%3E%3Cstop offset='0.197' stop-color='%23cbb0a7'/%3E%3Cstop offset='0.218' stop-color='%23CCACA1'/%3E%3Cstop offset='0.218' stop-color='%23f5f4f3'/%3E%3Cstop offset='0.239' stop-color='%23CCACA1'/%3E%3Cstop offset='0.239' stop-color='%23c1aea8'/%3E%3Cstop offset='0.254' stop-color='%23CCACA1'/%3E%3Cstop offset='0.254' stop-color='%23e8dfdc'/%3E%3Cstop offset='0.283' stop-color='%23CCACA1'/%3E%3Cstop offset='0.283' stop-color='%23d7d0ce'/%3E%3Cstop offset='0.294' stop-color='%23CCACA1'/%3E%3Cstop offset='0.294' stop-color='%23c4a9a0'/%3E%3Cstop offset='0.305' stop-color='%23CCACA1'/%3E%3Cstop offset='0.305' stop-color='%23cac4c2'/%3E%3Cstop offset='0.332' stop-color='%23CCACA1'/%3E%3Cstop offset='0.332' stop-color='%23baa39b'/%3E%3Cstop offset='0.346' stop-color='%23CCACA1'/%3E%3Cstop offset='0.346' stop-color='%238e7b74'/%3E%3Cstop offset='0.362' stop-color='%23CCACA1'/%3E%3Cstop offset='0.362' stop-color='%23dcd0cd'/%3E%3Cstop offset='0.381' stop-color='%23CCACA1'/%3E%3Cstop offset='0.381' stop-color='%23888381'/%3E%3Cstop offset='0.415' stop-color='%23CCACA1'/%3E%3Cstop offset='0.415' stop-color='%23959393'/%3E%3Cstop offset='0.428' stop-color='%23CCACA1'/%3E%3Cstop offset='0.428' stop-color='%23d5c0b9'/%3E%3Cstop offset='0.442' stop-color='%23CCACA1'/%3E%3Cstop offset='0.442' stop-color='%23ccb4ac'/%3E%3Cstop offset='0.456' stop-color='%23CCACA1'/%3E%3Cstop offset='0.456' stop-color='%23c2b8b5'/%3E%3Cstop offset='0.498' stop-color='%23CCACA1'/%3E%3Cstop offset='0.498' stop-color='%23dcd7d5'/%3E%3Cstop offset='0.511' stop-color='%23CCACA1'/%3E%3Cstop offset='0.511' stop-color='%23817977'/%3E%3Cstop offset='0.532' stop-color='%23CCACA1'/%3E%3Cstop offset='0.532' stop-color='%2384736d'/%3E%3Cstop offset='0.541' stop-color='%23CCACA1'/%3E%3Cstop offset='0.541' stop-color='%23b2aba9'/%3E%3Cstop offset='0.56' stop-color='%23CCACA1'/%3E%3Cstop offset='0.56' stop-color='%23beb7b4'/%3E%3Cstop offset='0.581' stop-color='%23CCACA1'/%3E%3Cstop offset='0.581' stop-color='%23e7dcd9'/%3E%3Cstop offset='0.6' stop-color='%23CCACA1'/%3E%3Cstop offset='0.6' stop-color='%23cdb0a7'/%3E%3Cstop offset='0.618' stop-color='%23CCACA1'/%3E%3Cstop offset='0.618' stop-color='%237e7674'/%3E%3Cstop offset='0.656' stop-color='%23CCACA1'/%3E%3Cstop offset='0.656' stop-color='%23ccb2a9'/%3E%3Cstop offset='0.679' stop-color='%23CCACA1'/%3E%3Cstop offset='0.679' stop-color='%23ece9e8'/%3E%3Cstop offset='0.689' stop-color='%23CCACA1'/%3E%3Cstop offset='0.689' stop-color='%23b3a4a0'/%3E%3Cstop offset='0.720' stop-color='%23CCACA1'/%3E%3Cstop offset='0.720' stop-color='%239f9c9b'/%3E%3Cstop offset='0.734' stop-color='%23CCACA1'/%3E%3Cstop offset='0.734' stop-color='%23dbd0cd'/%3E%3Cstop offset='0.748' stop-color='%23CCACA1'/%3E%3Cstop offset='0.748' stop-color='%23888787'/%3E%3Cstop offset='0.764' stop-color='%23CCACA1'/%3E%3Cstop offset='0.764' stop-color='%23c9b0a7'/%3E%3Cstop offset='0.788' stop-color='%23CCACA1'/%3E%3Cstop offset='0.788' stop-color='%237a6e6a'/%3E%3Cstop offset='0.808' stop-color='%23CCACA1'/%3E%3Cstop offset='0.808' stop-color='%23d4bfb8'/%3E%3Cstop offset='0.831' stop-color='%23CCACA1'/%3E%3Cstop offset='0.831' stop-color='%23bc9f95'/%3E%3Cstop offset='0.856' stop-color='%23CCACA1'/%3E%3Cstop offset='0.856' stop-color='%23cdafa5'/%3E%3Cstop offset='0.872' stop-color='%23CCACA1'/%3E%3Cstop offset='0.872' stop-color='%23aca19d'/%3E%3Cstop offset='0.894' stop-color='%23CCACA1'/%3E%3Cstop offset='0.894' stop-color='%23cfb1a7'/%3E%3Cstop offset='0.914' stop-color='%23CCACA1'/%3E%3Cstop offset='0.914' stop-color='%238e8a89'/%3E%3Cstop offset='0.942' stop-color='%23CCACA1'/%3E%3Cstop offset='0.942' stop-color='%23b29f98'/%3E%3Cstop offset='0.957' stop-color='%23CCACA1'/%3E%3Cstop offset='0.957' stop-color='%237e6f6a'/%3E%3Cstop offset='0.973' stop-color='%23CCACA1'/%3E%3Cstop offset='0.973' stop-color='%23ceb4ac'/%3E%3Cstop offset='1' stop-color='%23CCACA1'/%3E%3Cstop offset='1' stop-color='%23c1b3ae'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' x='0' y='0' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
     }
 
     h1 {
@@ -46,13 +43,13 @@ require_once 'database/data_retrive.php';
     }
 
     #card {
-      background: #abbaab;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #ffffff, #abbaab);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      
+      background: #83a4d4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+    h5,p{
+      color:black;
     }
   </style>
 </head>
