@@ -31,7 +31,7 @@ require_once 'database/data_for_home.php';
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
-        <span class="tooltip">ashboard</span>
+        <span class="tooltip">Dashboard</span>
       </li>
       <li>
         <a href="attendence.php">
@@ -97,7 +97,7 @@ require_once 'database/data_for_home.php';
     </ul>
   </div>
   <section class="home-section">
-    <div class="text">Dashboard</div>
+    <div class="text" style="color:whitesmoke">Dashboard</div>
     <!-- card body start from here -->
     <div class="container">
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
