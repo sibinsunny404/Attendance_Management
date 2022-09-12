@@ -50,6 +50,7 @@ require_once 'database/data_retrive.php';
     #card:hover{
       box-shadow:0 8px 16px 0 rgba(0,0,0,4);
       z-index: 100;
+      background-color: aquamarine;
       
     }
     h5,p{
