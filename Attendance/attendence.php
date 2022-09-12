@@ -95,7 +95,7 @@ background-size: cover;
                         ?>
                                 <tr>
                                     <td><?php echo $sn ?></td>
-                                    <td><?php echo $data['usn']; ?>
+                                    <td style="text-transform:uppercase;"><?php echo $data['usn']; ?>
                                         <input type="hidden" value="<?php echo $data['usn']; ?>" name="usn[<?php echo $data['usn']; ?>]">
                                     </td>
 
