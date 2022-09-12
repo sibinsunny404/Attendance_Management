@@ -45,12 +45,16 @@ require_once 'database/data_retrive.php';
     #card {
       border: solid 1px black;  
       border-radius: 10px;
-      background-color:lightgray;  
+      background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
     }
     #card:hover{
       box-shadow:0 8px 16px 0 rgba(0,0,0,4);
       z-index: 100;
-      background-color: aquamarine;
+      background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
       
     }
     h5,p{

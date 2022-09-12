@@ -46,6 +46,12 @@ mysqli_close($connect);
       background-attachment: fixed;
       background-size: cover;
     }
+    .container #p:checked ~ .check {
+    background-color: rgb(21, 255, 0);
+  }
+  .container #a:checked ~ .check {
+    background-color: red;
+  }
     </style>
 </head>
 
