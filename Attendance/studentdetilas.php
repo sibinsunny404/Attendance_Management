@@ -82,7 +82,7 @@ $subres = mysqli_query($connect, $subsel);
 </head>
  
 <body>
-<div style="text-align:center;"><a style="color:red;font-size:large;font-weight:400;" href="logout.php?logout"><img style="height:30px;width:30px;" src="assets/images/users/logout.png" alt="">LogOut</a></div>
+<!-- <div style="text-align:center;"><a style="color:red;font-size:large;font-weight:400;" href="logout.php?logout"><img style="height:30px;width:30px;" src="assets/images/users/logout.png" alt="">LogOut</a></div> -->
   <?php
   require_once 'loader.html';
   while ($subdata = mysqli_fetch_array($sviewres)) {
@@ -112,6 +112,7 @@ $subres = mysqli_query($connect, $subsel);
             </div>
             <div class="col-md-8">
               <div class="card-body" style="padding-left: 20px;">
+              <div style="text-align:right;"><a style="color:red;font-size:large;font-weight:400;" href="logout.php?logout"><img style="height:30px;width:30px;" src="assets/images/users/logout.png" alt="">LogOut</a></div>
                 <h3 class="card-title"><?php echo $name ?></h3>
                 <h5 class="card-text"><code>USN:</code><?php echo $usn ?></h5>
                 <h5 class="card-text"><code>Class:</code><?php echo $cls ?></h5>
