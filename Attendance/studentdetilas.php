@@ -29,13 +29,10 @@ $subres = mysqli_query($connect, $subsel);
 
   <style>
     body {
-      background: #83a4d4;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #b6fbff, #83a4d4);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
+      background-color: #330000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D18'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FA3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FA3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.5'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;}
 
     .card-title,
     .card-text {
@@ -53,6 +50,9 @@ $subres = mysqli_query($connect, $subsel);
       text-decoration-style: wavy;
 
     }
+    #new{
+      background-color: #E2E2E2;
+    }
 
     #card {
       background: #C9D6FF;
@@ -62,6 +62,9 @@ $subres = mysqli_query($connect, $subsel);
       background: linear-gradient(to right, #E2E2E2, #C9D6FF);
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    }
+    #card:hover{
+      box-shadow:0 8px 16px 0 rgba(0,0,0,2);
     }
 
     progress {
@@ -105,7 +108,7 @@ $subres = mysqli_query($connect, $subsel);
       <div class="container">
         <h3><kbd> Personal Detials</kbd></h3>
         <!-- <div class="shadow-lg p-3 mb-5  rounded " style="max-width:50%;"> -->
-        <div class="shadow-lg p-3 mb-5  rounded" class="card mb-3" style="max-width: 540px; padding-top: 30px; background-color:transparent; border:solid black 1px; border-radius:45px;">
+        <div class="shadow-lg p-3 mb-5  rounded" id="new" class="card mb-3" style="border:1px;border-radius:10px; max-width: 540px; padding-top: 30px;  border:solid black 1px; border-radius:45px;">
           <div class="row g-0">
             <div class="col-md-4">
               <img style="padding: 20px; text-align:center; border:solid white 1px;height:180px;width:200px;border-radius:45px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">

@@ -11,20 +11,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    
-
 </head>
 
-<body style="text-align: center;">
+<body>
   <header>
     <!-- place navbar here -->
   </header>
   <main>
-    <form >
-    <h1>Enter the USN Of the student</h1>
-    USN:<input type="text" name="usn" id="usn" required>
-    <span id="avl"></span>
-    </form>
+    <div class="card text-start">
+      <img class="card-img-top" src="holder.js/100px180/" alt="Title">
+      <div class="card-body" style="width:500px;">
+        <h4 class="card-title">Title</h4>
+        <p class="card-text">Body</p>
+      </div>
+    </div>
   </main>
   <footer>
     <!-- place footer here -->
@@ -38,24 +38,5 @@
     integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
   </script>
 </body>
-
-<script src="jQuery/jquery-3.6.0.min.js"></script>
-  
-  <script>
-   $(document).ready(function(){
-    $("#usn").blur(function(){
-      var susn=$(this).val();
-      $.ajax({
-        url:"verify.php",
-        method:"POST",
-        data:{usn:susn},
-        dataType:"text",
-        success:function(html){
-          $('#avl').html(html);
-        }
-      })
-    })
-   })
-  </script>
 
 </html>

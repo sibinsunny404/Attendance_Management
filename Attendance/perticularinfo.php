@@ -75,7 +75,9 @@ $subres = mysqli_query($connect, $subsel);
       color: #006A6A;
       display: inline-block;
       background-blend-mode: darken;
+      
     }
+
   </style>
 
 </head>
@@ -104,12 +106,12 @@ $subres = mysqli_query($connect, $subsel);
       <div class="container">
         <h3><kbd> Personal Detials</kbd></h3>
         <!-- <div class="shadow-lg p-3 mb-5  rounded " style="max-width:50%;"> -->
-        <div class="shadow-lg p-3 mb-5  rounded" class="card mb-3" style="max-width: 540px; padding-top: 30px; 
+        <div class="shadow-lg p-3 mb-5" class="card mb-3" style="max-width: 540px; padding-top: 30px; 
        background: #7F7FD5;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-        border:solid black 1px; border-radius:45px;">
+        border:solid black 1px; border-bottom-right-radius:50px;">
           <div class="row g-0">
             <div class="col-md-4">
               <img style="padding: 20px; text-align:center; border:solid white 1px;height:180px;width:200px;border-radius:45px;" class="img-fluid rounded-start" src="student_image/<?php echo $pic; ?>">
@@ -117,14 +119,14 @@ background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+
             <div class="col-md-8">
               <div class="card-body" style="padding-left: 20px;">
                 <h3 class="card-title"><?php echo $name ?></h3>
-                <h5 class="card-text"><code>USN:</code><?php echo $usn ?></h5>
-                <h5 class="card-text"><code>Class:</code><?php echo $cls ?></h5>
+                <h5 style="text-transform:uppercase;" class="card-text"><code>USN:</code><?php echo $usn ?></h5>
+                <h5 style="text-transform:uppercase;" class="card-text"><code>Class:</code><?php echo $cls ?></h5>
                 <h5 class="card-text"><code>Sem:</code><?php echo $sem ?></h5>
                 <h5 class="card-text"><code>DOB:</code><?php echo $fdate; ?></h5>
                 <h5 class="card-text"><code>PhNo:</code><?php echo $mbno; ?></h5>
-                <h5 class="card-text"><code>District:</code><?php echo $district; ?></h5>
-                <h5 class="card-text"><code>State:</code><?php echo $state; ?></h5>
-                <h5 class="card-text"><code>Address:</code><?php echo $addres; ?></h5>
+                <h5 style="text-transform:uppercase;"class="card-text"><code>District:</code><?php echo $district; ?></h5>
+                <h5 style="text-transform:capitalize;"class="card-text"><code>State:</code><?php echo $state; ?></h5>
+                <h5 style="text-transform:capitalize;"class="card-text"><code>Address:</code><?php echo $addres; ?></h5>
               </div>
             </div>
           </div>
@@ -164,13 +166,16 @@ background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+
 
 
                                           if ($perdisplay == 0) {
-                                            echo '<p style="color:red;">Not Attended For A Class</p>';
+                                            echo '<p style="color:red;">Not Attended For A Class </p>';
+                                            echo '<b style="float: left;">'.round($perdisplay, 2) .'%</b>';
+                                           
                                           } else {
                                             echo "<b>".round($perdisplay, 2) ."%</b>";
+                                            
                                           }
 
                                           ?>
-                      <progress value="<?php echo $present ?>" max="<?php echo $subcount ?>"></progress>
+                      <progress id="prog" value="<?php echo $present ?>" max="<?php echo $subcount ?>"></progress>
                   </fieldset>
               <?php
                 }
