@@ -111,44 +111,10 @@ box-shadow:0 4px 8px 0 rgba(0,0,0,2);
                 <span id="avl"></span>
               </div>
               <div class="col-md-4">
-                <label for="class" class="form-label">CLASS</label>
-                <select id="class" class="form-select" name="class" required>
-                  <option value="mca">MCA</option>
-                </select>
-              </div>
-              <div class="col-md-4">
                 <label for="sem" class="form-label">SEM</label>
                 <select id="sem" class="form-select" name="sem" required>
                   <option value="2">2</option>
                 </select>
-              </div>
-              <div class="col-md-4">
-                <label for="dob" class="form-label">DOB</label>
-                <input type="date" class="form-control" id="dob" name="dob" required>
-              </div>
-              <div class="col-md-4">
-                <label for="dst" class="form-label">District</label>
-                <select id="dst" class="form-select" name="dst" required>
-                  <option value="dk">DK</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="state" class="form-label">State</label>
-                <select id="state" class="form-select" name="state" required>
-                  <option value="karnataka">Karnataka</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="mbno" class="form-label">Mobile Number</label>
-                <input type="text" class="form-control" id="mbno" name="mbno" required>
-              </div>
-              <div class="col-6">
-                <label for="add" class="form-label">Address</label>
-                <input type="text" class="form-control" id="add" placeholder="Enter The full Address" name="add" required>
-              </div>
-              <div class="col-6">
-                <label for="image" class="form-label">Student Image</label>
-                <input type="file" name="image" id="image" value="" accept="image/x-png,image/gif,image/jpeg" required>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="ad()">ADD</button>
