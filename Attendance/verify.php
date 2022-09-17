@@ -20,7 +20,10 @@ if(isset($_POST['subcode'])){
   $result=mysqli_query($connect,$sql);
   // $count=mysqli_num_rows($result);
   if(mysqli_num_rows($result)>0){
-    echo '<div style="color:red"><b>Subject Already Added</b></div>';
+    echo '<div style="color:red"><b>Subject Already Added</b></div>
+    <script>
+    document.getEl
+    ';
     
   }
   else{

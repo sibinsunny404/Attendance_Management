@@ -3,17 +3,22 @@
 require_once 'loader.html';
 require_once 'sessions.php';
 require_once 'database/connection.php';
-if (isset($_POST['add'])) {
+if (isset($_POST['submit'])) {
     $name = $_POST["subn"];
     $subc = $_POST["subc"];
     $sem = $_POST["sem"];
-    mysqli_query($connect, "INSERT INTO `subjects`(`sub_name`, `sub_code`, `sem`) 
+    try {
+        mysqli_query($connect, "INSERT INTO `subjects`(`sub_name`, `sub_code`, `sem`) 
   VALUES ('$name','$subc','$sem')");
-    header("location:addsub.php?sucess=Subject Detials Added Succeessfully");
+
+        header("location:addsub.php?sucess=Subject Detials Added Succeessfully");
+    } catch (\Throwable $th) {
+       echo '<script>
+           alert("Duplicate Entry Not Allowed");
+   </script>';
+        }
 }
-// else{
-//     header("location:addsub.php?failed=Subject Detials Failed to add");
-// }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -94,7 +99,7 @@ box-shadow:0 4px 8px 0 rgba(0,0,0,2);
 
                             <div class="col-md-6">
                                 <label for="subn" class="form-label">Subject Name</label>
-                                <input type="text" class="form-control" id="subn" name="subn" required>
+                                <input type="text" class="form-control" id="subn" name="subn" onclick="hide()" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="subc" class="form-label">Subject Code</label>
@@ -103,7 +108,7 @@ box-shadow:0 4px 8px 0 rgba(0,0,0,2);
                             </div>
                             <div class="col-md-4"></div>
                             <div class="col-md-4">
-                                <label for="sem" class="form-label">SEM</label>
+                                <label for="sem" class="form-label" onclick="show()">SEM</label>
                                 <select id="sem" class="form-select" name="sem" required>
                                     <option value="2">2</option>
                                 </select>
