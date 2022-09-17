@@ -4,30 +4,19 @@ require_once 'loader.html';
 require_once 'sessions.php';
 require_once 'database/connection.php';
 if (isset($_POST['add'])) {
-  $name = $_POST["uname"];
-  $usn = $_POST["usn"];
-  $cls = $_POST["class"];
+  $name = $_POST["subn"];
+  $subc = $_POST["subc"];
   $sem = $_POST["sem"];
-  $dstr = $_POST["dst"];
-  $dob = $_POST["dob"];
-  $state = $_POST["state"];
-  $mbno = $_POST["mbno"];
-  $add = $_POST["add"];
-  $password = md5($usn);
-  $auth = "student";
-  move_uploaded_file($_FILES["image"]["tmp_name"], "student_image/" . $_FILES["image"]["name"]);
-  $file = $_FILES["image"]["name"];
-  mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
-        values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
-  mysqli_query($connect, "insert into users (`username`, `password`, `auth_type`) values('$usn','$password','$auth')");
-  header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
+  mysqli_query($connect, "INSERT INTO `subjects`(`sub_name`, `sub_code`, `sem`) 
+  values ('$name','$subc','$sem')");
+ header("location:addsub.php?sucess=Subject Detials Added Succeessfully");
 }
 ?>
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>Add students</title>
+  <title>Add Subjects</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <!-- /<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
@@ -81,7 +70,7 @@ if (isset($_POST['add'])) {
 
   <center>
 
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST">
       <div class="container" style="padding-top: 125px;">
         <div class="card" style="width: 50rem; 
         background-color: #8EC5FC;
@@ -97,25 +86,27 @@ box-shadow:0 4px 8px 0 rgba(0,0,0,2);
             <?php
             }
             ?>
-            <h2 style="font-style:italic;">Enter The Student Detials</h2>
+            <h2 style="font-style:italic;">Enter The Subject Detials</h2>
 
             <div class="row g-3">
 
               <div class="col-md-6">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" name="uname" required>
+                <label for="subn" class="form-label">Subject Name</label>
+                <input type="text" class="form-control" id="subn" name="subn" required>
               </div>
               <div class="col-md-6">
-                <label for="usn" class="form-label">USN</label>
-                <input type="text" class="form-control" id="usn" name="usn" required>
-                <span id="avl"></span>
+                <label for="subc" class="form-label">Subject Code</label>
+                <input type="text" class="form-control" id="subc" name="subc" required>
+                <span id="subavl"></span>
               </div>
+              <div class="col-md-4"></div>
               <div class="col-md-4">
                 <label for="sem" class="form-label">SEM</label>
                 <select id="sem" class="form-select" name="sem" required>
                   <option value="2">2</option>
                 </select>
               </div>
+              <div class="col-md-4"></div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary" id="submit" name="submit" onclick="ad()">ADD</button>
               </div>
@@ -140,17 +131,17 @@ box-shadow:0 4px 8px 0 rgba(0,0,0,2);
 <script src="jQuery/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function() {
-    $("#usn").blur(function() {
-      var susn = $(this).val();
+    $("#subc").blur(function() {
+      var subc = $(this).val();
       $.ajax({
         url: "verify.php",
         method: "POST",
         data: {
-          usn: susn
+          subcode: subc
         },
         dataType: "text",
         success: function(html) {
-          $('#avl').html(html);
+          $('#subavl').html(html);
         }
       })
     })
