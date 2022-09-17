@@ -64,10 +64,10 @@ require_once 'database/data_for_home.php';
       </li>
       <li>
         <a href="#">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">File Manager</span>
+        <i class='bx bxs-book-add'></i>
+          <span class="links_name">Add Subject</span>
         </a>
-        <span class="tooltip">Files</span>
+        <span class="tooltip">Add Subject</span>
       </li>
       <li>
         <a href="#">
