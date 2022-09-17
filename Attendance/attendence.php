@@ -56,6 +56,9 @@ mysqli_close($connect);
 </head>
 
 <body>
+<?php
+    require_once 'sidebar.php';
+  ?>
     <?php
     require_once 'loader.html';
     ?>

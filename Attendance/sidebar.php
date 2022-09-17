@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <!-- <title> Responsive Sidebar Menu  | CodingLab </title> -->
     <link rel="stylesheet" href="css/sidebar.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -46,7 +46,7 @@
         <span class="tooltip">View Students</span>
       </li>
       <li>
-        <a href="#">
+        <a href="addsub.php">
         <i class='bx bxs-book-add'></i>
           <span class="links_name">Add Subject</span>
         </a>

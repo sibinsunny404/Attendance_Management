@@ -63,7 +63,7 @@ require_once 'database/data_for_home.php';
         <span class="tooltip">View Students</span>
       </li>
       <li>
-        <a href="#">
+        <a href="addsub.php">
         <i class='bx bxs-book-add'></i>
           <span class="links_name">Add Subject</span>
         </a>
