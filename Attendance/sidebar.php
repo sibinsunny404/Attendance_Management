@@ -18,7 +18,7 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="admin_dash.php">
+      <a href="admin_dash.php">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
@@ -47,10 +47,10 @@
       </li>
       <li>
         <a href="#">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">File Manager</span>
+        <i class='bx bxs-book-add'></i>
+          <span class="links_name">Add Subject</span>
         </a>
-        <span class="tooltip">Files</span>
+        <span class="tooltip">Add Subject</span>
       </li>
       <li>
         <a href="#">
