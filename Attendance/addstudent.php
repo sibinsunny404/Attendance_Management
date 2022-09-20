@@ -15,12 +15,21 @@ if (isset($_POST['add'])) {
   $add = $_POST["add"];
   $password = md5($usn);
   $auth = "student";
+  try {
   move_uploaded_file($_FILES["image"]["tmp_name"], "student_image/" . $_FILES["image"]["name"]);
   $file = $_FILES["image"]["name"];
   mysqli_query($connect, "insert into students (usn,name,class,sem,dob,mbno,district,state,address,image) 
         values ('$usn','$name','$cls','$sem','$dob','$mbno','$dstr','$state','$add','$file')");
   mysqli_query($connect, "insert into users (`username`, `password`, `auth_type`) values('$usn','$password','$auth')");
   header("location:addstudent.php?sucess=Student Detials Added Succeessfully");
+} catch (\Throwable $th) {
+  echo '<center><div class="alert alert-danger d-flex align-items-center" role="alert" style="width:50%;">
+  <svg  class="bi flex-shrink-0 me-2" width="25" height="25" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div>
+    Duplicte Entry Not Allowed
+  </div>
+</div></center>';
+   }
 }
 ?>
 <!doctype html>

@@ -247,5 +247,5 @@ background-size: contain;
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;
-  }
+  } 
 }

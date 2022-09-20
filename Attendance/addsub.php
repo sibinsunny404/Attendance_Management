@@ -13,9 +13,12 @@ if (isset($_POST['submit'])) {
 
         header("location:addsub.php?sucess=Subject Detials Added Succeessfully");
     } catch (\Throwable $th) {
-       echo '<script>
-           alert("Duplicate Entry Not Allowed");
-   </script>';
+       echo '<center><div class="alert alert-danger d-flex align-items-center" role="alert" style="width:50%;" id="p">
+       <svg  class="bi flex-shrink-0 me-2" width="25" height="25" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+       <div>
+         Duplicte Entry Not Allowed
+       </div>
+     </div></center>';
         }
 }
 
@@ -71,6 +74,8 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/sidebar.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="jQuery/jquery-3.6.0.min.js"></script>
+    
 </head>
 
 <body>
