@@ -69,27 +69,6 @@ require_once 'database/data_for_home.php';
         </a>
         <span class="tooltip">Add Subject</span>
       </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-cart-alt'></i>
-          <span class="links_name">Order</span>
-        </a>
-        <span class="tooltip">Order</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-heart'></i>
-          <span class="links_name">Saved</span>
-        </a>
-        <span class="tooltip">Saved</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-cog'></i>
-          <span class="links_name">Setting</span>
-        </a>
-        <span class="tooltip">Setting</span>
-      </li>
       <li class="profile">
         <div class="profile-details">
         <img style="height: 50px;width:50px;background-color: white;" src="assets/images/extra/tux-logo-24.png" alt="">
@@ -146,9 +125,14 @@ require_once 'database/data_for_home.php';
                   <div class="align-self-center">
                     <i class="icon-speech warning font-large-2 float-left"></i>
                   </div>
+                  <?php
+                  while ($subno = mysqli_fetch_array($subject)) {
+                    $subcount = $subno['count(*)'];
+                  }
+                  ?>
                   <div class="media-body text-right">
-                    <h3>156</h3>
-                    <span>New Comments</span>
+                    <h3><?php echo $subcount; ?></h3>
+                    <span>Number of Subjects</span>
                   </div>
                 </div>
               </div>
@@ -163,9 +147,19 @@ require_once 'database/data_for_home.php';
                   <div class="align-self-center">
                     <i class="icon-graph success font-large-2 float-left"></i>
                   </div>
+                  <?php
+                  while ($preno = mysqli_fetch_array($present)) {
+                    $precount = $preno['count(*)'];
+                  }
+                  ?>
                   <div class="media-body text-right">
-                    <h3>64.89 %</h3>
-                    <span>Bounce Rate</span>
+                    <h3><?php 
+                    if(($precount)==0){
+                      echo "<h4 style='color:red;'>Attendace Not Tacked</h4>";
+                    }
+                    else
+                    echo $precount; ?></h3>
+                    <span>Student Precent Today</span>
                   </div>
                 </div>
               </div>
@@ -180,9 +174,14 @@ require_once 'database/data_for_home.php';
                   <div class="align-self-center">
                     <i class="icon-pointer danger font-large-2 float-left"></i>
                   </div>
+                  <?php
+                  while ($semn = mysqli_fetch_array($semc)) {
+                    $sem = $semn['sem'];
+                  }
+                  ?>
                   <div class="media-body text-right">
-                    <h3>423</h3>
-                    <span>Total Visits</span>
+                    <h3><?php echo $sem;?></h3>
+                    <span>Curent Semister</span>
                   </div>
                 </div>
               </div>
@@ -197,9 +196,14 @@ require_once 'database/data_for_home.php';
             <div class="card-content">
               <div class="card-body">
                 <div class="media d-flex">
+                <?php
+                  while ($attcount = mysqli_fetch_array($attco)) {
+                    $attc = $attcount['count(*)'];
+                  }
+                  ?>
                   <div class="media-body text-left">
-                    <h3 class="danger">278</h3>
-                    <span>New Projects</span>
+                    <h3 class="danger"><?php echo $attc;?></h3>
+                    <span>Total Attendance Tacked</span>
                   </div>
                   <div class="align-self-center">
                     <i class="icon-rocket danger font-large-2 float-right"></i>
@@ -214,9 +218,14 @@ require_once 'database/data_for_home.php';
             <div class="card-content">
               <div class="card-body">
                 <div class="media d-flex">
+                <?php
+                  while ($admincount = mysqli_fetch_array($adminc)) {
+                    $admin = $admincount['count(*)'];
+                  }
+                  ?>
                   <div class="media-body text-left">
-                    <h3 class="success">156</h3>
-                    <span>New Clients</span>
+                    <h3 class="success"><?php echo $admin;?></h3>
+                    <span>Total Admin</span>
                   </div>
                   <div class="align-self-center">
                     <i class="icon-user success font-large-2 float-right"></i>
