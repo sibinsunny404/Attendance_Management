@@ -6,7 +6,7 @@ require_once 'database/data_retrive.php';
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Student_view</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=1024">
