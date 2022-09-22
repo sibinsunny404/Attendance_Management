@@ -10,7 +10,7 @@
 
     // attendace present Count
     $date=date('Y-m-d');
-    $prequery="select distinct count(*) from `attendence` where date='$date'";
+    $prequery="select count(DISTINCT usn) from `attendence` where date='$date' and attend='present'";
     $present = mysqli_query($connect, $prequery);
 
     // sem 
@@ -22,6 +22,6 @@
     $adminc = mysqli_query($connect, $admq);
 
     // total attendance
-    $atque="select count(*) from `attendence`";
+    $atque="select count(*) from `attendence` group by date";
     $attco = mysqli_query($connect, $atque);
 ?>

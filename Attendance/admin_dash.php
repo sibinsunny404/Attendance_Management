@@ -149,7 +149,7 @@ require_once 'database/data_for_home.php';
                   </div>
                   <?php
                   while ($preno = mysqli_fetch_array($present)) {
-                    $precount = $preno['count(*)'];
+                    $precount = $preno['count(DISTINCT usn)'];
                   }
                   ?>
                   <div class="media-body text-right">
@@ -158,7 +158,7 @@ require_once 'database/data_for_home.php';
                       echo "<h4 style='color:red;'>Attendace Not Tacked</h4>";
                     }
                     else
-                    echo $precount; ?></h3>
+                    echo "<h3>$precount</h3>" ?></h3>
                     <span>Student Precent Today</span>
                   </div>
                 </div>
