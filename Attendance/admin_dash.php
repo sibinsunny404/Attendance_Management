@@ -159,7 +159,7 @@ require_once 'database/data_for_home.php';
                     }
                     else
                     echo "<h3>$precount</h3>" ?></h3>
-                    <span>Student Precent Today</span>
+                    <span>Students Precent Today</span>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ require_once 'database/data_for_home.php';
                   ?>
                   <div class="media-body text-right">
                     <h3><?php echo $sem;?></h3>
-                    <span>Curent Semister</span>
+                    <span>Current Semister</span>
                   </div>
                 </div>
               </div>
