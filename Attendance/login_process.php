@@ -8,7 +8,7 @@ if (isset($_POST['login'])) {
     } else {
         $hpass=md5($_POST['pass']);
         $sname=$_POST['uname'];
-        $uname=preg_replace("/[^a-zA-z0-9]/","",$sname);
+        $uname=preg_replace("/[^a-zA-Z0-9]/","",$sname);
         $query = "select * from users where username='" . $uname . "' and password='" . $hpass . "'";
         $result = mysqli_query($connect, $query);
         $row=mysqli_fetch_array($result);

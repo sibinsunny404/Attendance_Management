@@ -203,7 +203,7 @@ require_once 'database/data_for_home.php';
                   ?>
                   <div class="media-body text-left">
                     <h3 class="danger"><?php echo $attc;?></h3>
-                    <span>Total Attendance Tacked</span>
+                    <span>Total Attendance Taked</span>
                   </div>
                   <div class="align-self-center">
                     <i class="icon-rocket danger font-large-2 float-right"></i>
