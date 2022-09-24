@@ -98,7 +98,7 @@ box-shadow:0 4px 8px 0 rgba(0,0,0,2);
                         <?php
                         }
                         ?>
-                        <h2 style="font-style:italic;">Enter The Subject Detials</h2>
+                        <h2 style="font-style:italic;">Enter The Subject Details</h2>
 
                         <div class="row g-3">
 
