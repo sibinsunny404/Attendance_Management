@@ -2,7 +2,9 @@
 session_start();
 
 if (isset($_SESSION['user'])) {
-} else {
+	// donothing
+} 
+else {
 	header("location:index.php");
 }
 $now = time();
