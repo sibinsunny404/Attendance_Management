@@ -69,7 +69,7 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   ?>
 
   <div class="container-fluid">
-    <h1>Student Detials</h1>
+    <h1>Student Details</h1>
     <div class="row  form-group">
       <?php
       require_once 'database/data_retrive.php';

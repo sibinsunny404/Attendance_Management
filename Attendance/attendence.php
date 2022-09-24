@@ -63,7 +63,7 @@ mysqli_close($connect);
     <center>
         <!-- form method -->
         <form method="POST">
-            <h1 style="line-height:normal;">Student Attendense</h1>
+            <h1 style="line-height:normal;">Student Attendance</h1>
             <h3>Date:<?php echo date("d/m/y"); ?></h3><br>
             <h3>Time:<?php
                         date_default_timezone_set("Asia/Calcutta");
