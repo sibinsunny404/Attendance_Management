@@ -95,7 +95,7 @@ require_once 'database/data_for_home.php';
       <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
       <div class="row">
-        <div class="col-xl-3 col-sm-6 col-12">
+        <div class="col-xl-4 col-sm-6 col-12">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -117,7 +117,7 @@ require_once 'database/data_for_home.php';
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 col-12">
+        <div class="col-xl-4 col-sm-6 col-12">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -139,7 +139,7 @@ require_once 'database/data_for_home.php';
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 col-12">
+        <div class="col-xl-4 col-sm-6 col-12">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -166,7 +166,10 @@ require_once 'database/data_for_home.php';
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 col-12">
+      </div>
+        
+      <div class="row">
+      <div class="col-xl-4 col-sm-6 col-12">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -188,10 +191,9 @@ require_once 'database/data_for_home.php';
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 col-12">
+
+        <div class="col-xl-4 col-sm-6 col-12">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -213,7 +215,7 @@ require_once 'database/data_for_home.php';
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 col-12">
+        <div class="col-xl-4 col-sm-6 col-12">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
