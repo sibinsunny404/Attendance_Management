@@ -116,16 +116,17 @@ background-size: cover;}
             <div class="col-md-8">
               <div class="card-body" style="padding-left: 20px;">
               <div style="text-align:right;"><a style="color:red;font-size:large;font-weight:400;" href="logout.php?logout"><img style="height:30px;width:30px;" src="assets/images/users/logout.png" alt="">LogOut</a></div>
+              <div class="card-body" style="padding-left: 20px;">
                 <h3 class="card-title"><?php echo $name ?></h3>
-                <h5 class="card-text"><code>USN:</code><?php echo $usn ?></h5>
-                <h5 class="card-text"><code>Class:</code><?php echo $cls ?></h5>
+                <h5 style="text-transform:uppercase;" class="card-text"><code>USN:</code><?php echo $usn ?></h5>
+                <h5 style="text-transform:uppercase;" class="card-text"><code>Class:</code><?php echo $cls ?></h5>
                 <h5 class="card-text"><code>Sem:</code><?php echo $sem ?></h5>
                 <h5 class="card-text"><code>DOB:</code><?php echo $fdate; ?></h5>
                 <h5 class="card-text"><code>PhNo:</code><?php echo $mbno; ?></h5>
-                <h5 class="card-text"><code>District:</code><?php echo $district; ?></h5>
-                <h5 class="card-text"><code>State:</code><?php echo $state; ?></h5>
-                <h5 class="card-text"><code>Address:</code><?php echo $addres; ?></h5>
-              </div>
+                <h5 style="text-transform:uppercase;" class="card-text"><code>District:</code><?php echo $district; ?></h5>
+                <h5 style="text-transform:capitalize;" class="card-text"><code>State:</code><?php echo $state; ?></h5>
+                <h5 style="text-transform:capitalize;" class="card-text"><code>Address:</code><?php echo $addres; ?></h5>
+             </div>
             </div>
           </div>
         </div>

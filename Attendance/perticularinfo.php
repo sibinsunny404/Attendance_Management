@@ -55,8 +55,9 @@ $subres = mysqli_query($connect, $subsel);
     #card {
       background-color: #FFFCF6;
     }
-    #card:hover{
-      box-shadow:0 8px 16px 0 rgba(0,0,0,2);
+
+    #card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 2);
     }
 
     progress {
@@ -75,9 +76,8 @@ $subres = mysqli_query($connect, $subsel);
       color: #006A6A;
       display: inline-block;
       background-blend-mode: darken;
-      
-    }
 
+    }
   </style>
 
 </head>
@@ -124,9 +124,9 @@ background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+
                 <h5 class="card-text"><code>Sem:</code><?php echo $sem ?></h5>
                 <h5 class="card-text"><code>DOB:</code><?php echo $fdate; ?></h5>
                 <h5 class="card-text"><code>PhNo:</code><?php echo $mbno; ?></h5>
-                <h5 style="text-transform:uppercase;"class="card-text"><code>District:</code><?php echo $district; ?></h5>
-                <h5 style="text-transform:capitalize;"class="card-text"><code>State:</code><?php echo $state; ?></h5>
-                <h5 style="text-transform:capitalize;"class="card-text"><code>Address:</code><?php echo $addres; ?></h5>
+                <h5 style="text-transform:uppercase;" class="card-text"><code>District:</code><?php echo $district; ?></h5>
+                <h5 style="text-transform:capitalize;" class="card-text"><code>State:</code><?php echo $state; ?></h5>
+                <h5 style="text-transform:capitalize;" class="card-text"><code>Address:</code><?php echo $addres; ?></h5>
               </div>
             </div>
           </div>
@@ -167,11 +167,9 @@ background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+
 
                                           if ($perdisplay == 0) {
                                             echo '<p style="color:red;">Not Attended For A Class </p>';
-                                            echo '<b style="float: left;">'.round($perdisplay, 2) .'%</b>';
-                                           
+                                            echo '<b style="float: left;">' . round($perdisplay, 2) . '%</b>';
                                           } else {
-                                            echo "<b>".round($perdisplay, 2) ."%</b>";
-                                            
+                                            echo "<b>" . round($perdisplay, 2) . "%</b>";
                                           }
 
                                           ?>
